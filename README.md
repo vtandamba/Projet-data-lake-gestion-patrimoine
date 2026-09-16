@@ -17,12 +17,6 @@ pip install -r requirements.txt
 playwright install chromium
 ```
 
-## Lancer l'ingestion
-
-```bash
-python src/ingestion/ingest_fsi_bronze.py
-```
-
 ## Sources de données
 
 - **Financial Secrecy Index (FSI)** — Tax Justice Network, licence [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). À citer dans tous les usages et publications dérivées.
