@@ -1,0 +1,26 @@
+# Environnements virtuels
+venv/
+.venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Éditeurs / OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+# Données du data lake : on ne versionne que la structure (.gitkeep)
+data/**
+!data/**/
+!data/**/.gitkeep
