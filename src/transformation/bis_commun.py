@@ -21,8 +21,14 @@ ZONE_EURO = "XM"
 def lire_csv_bis(nom_fichier: str, colonnes=None) -> pd.DataFrame:
     """Lit un CSV BIS en texte. Les en-têtes 'FREQ:Frequency' deviennent 'freq'."""
     chemin = DOSSIER_BRONZE_BIS / nom_fichier
-    df = pd.read_csv(chemin, dtype=str, encoding="utf-8", low_memory=False)
-    df.columns = [c.split(":")[0].strip().lower() for c in df.columns]
+
+    def nom_court(c):
+        return c.split(":")[0].strip().lower()
+
+    # on ne charge que les colonnes utiles (fichiers de plusieurs centaines de Mo)
+    usecols = None if colonnes is None else (lambda c: nom_court(c) in colonnes)
+    df = pd.read_csv(chemin, dtype=str, encoding="utf-8", low_memory=False, usecols=usecols)
+    df.columns = [nom_court(c) for c in df.columns]
     if colonnes is not None:
         df = df[colonnes]
     return df
