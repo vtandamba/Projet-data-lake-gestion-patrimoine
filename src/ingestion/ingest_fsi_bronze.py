@@ -1,89 +1,207 @@
 """
-Ingestion — Financial Secrecy Index (Tax Justice Network)
-=========================================================
-Zone BRONZE : récupération brute du classement complet (Full List).
+Ingestion BRONZE — Financial Secrecy Index (FSI 2026)
+Source : Tax Justice Network — https://fsi.taxjustice.net/full-list/
+Licence : CC BY-NC-SA 4.0 (usage académique). >>> Citer le Tax Justice Network dans le rapport. <<<
 
-Le tableau de la page est construit en JavaScript : les outils qui lisent
-le HTML brut (Google Sheets IMPORTHTML, pandas.read_html seul) voient une
-page vide. Playwright ouvre un vrai navigateur, laisse le JS s'exécuter,
-puis on récupère le HTML déjà rendu.
+POURQUOI CE SCRIPT :
+Le classement FSI n'est pas un simple tableau HTML : la page est construite en
+JavaScript et va chercher ses données via une API interne. Les méthodes classiques
+(copier-coller, Google Sheets IMPORTHTML, pandas.read_html) tombent donc sur une
+page vide. Le portail de téléchargement officiel, lui, limite l'accès gratuit à
+10 lignes.
 
-Source  : https://fsi.taxjustice.net/full-list/
-Licence : CC BY-NC-SA 4.0 — usage académique non commercial.
-          >>> Citer le Tax Justice Network comme source dans le rapport. <<<
+COMMENT ON CONTOURNE :
+On ouvre la page avec un vrai navigateur (Playwright), on le laisse exécuter son
+JavaScript, et on INTERCEPTE la réponse JSON de l'API que le site appelle
+(fsi2026_jurisdictions). On récupère ainsi toutes les juridictions d'un coup.
 
-Principe bronze : on enregistre les données TELLES QUELLES, sans nettoyage.
-Le nettoyage (types, noms de pays, valeurs manquantes) se fera en zone SILVER.
+PRINCIPE BRONZE :
+On enregistre les données TELLES QUELLES, sans aucun nettoyage ni sélection de
+colonnes. Le nettoyage (typage, harmonisation des noms de pays en ISO3, sélection
+des colonnes utiles : score + rang) se fera plus tard, en zone SILVER.
+
+SORTIE : data/bronze/fsi_2026_raw.csv
 """
 
+import asyncio
 from pathlib import Path
-from datetime import datetime
+
 import pandas as pd
-from playwright.sync_api import sync_playwright
-
-URL = "https://fsi.taxjustice.net/full-list/"
-OUTPUT_DIR = Path("data/bronze")
+from playwright.async_api import async_playwright
 
 
-def recuperer_html_rendu() -> str:
-    """Ouvre la page dans un navigateur, attend le rendu JS, renvoie le HTML."""
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)   # headless=False pour voir le navigateur
-        page = browser.new_page()
-        page.goto(URL, wait_until="networkidle", timeout=60_000)
+# ============================================================
+# 1. CONFIGURATION
+# ============================================================
 
-        # 1) Attendre que le tableau soit réellement présent dans la page
-        page.wait_for_selector("table", timeout=30_000)
+URL = "https://fsi.taxjustice.net/full-list/#scoring_id=317"
 
-        # 2) Faire défiler jusqu'en bas pour déclencher un éventuel
-        #    chargement progressif (lazy-load) de toutes les lignes
-        hauteur_precedente = 0
-        for _ in range(30):
-            page.mouse.wheel(0, 20_000)
-            page.wait_for_timeout(500)
-            hauteur = page.evaluate("document.body.scrollHeight")
-            if hauteur == hauteur_precedente:
-                break
-            hauteur_precedente = hauteur
+# Le script se trouve dans src/ingestion/.
+# parents[2] permet de retrouver la racine du projet.
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
-        html = page.content()
-        browser.close()
-        return html
+# Dossier Bronze existant à la racine du projet.
+BRONZE_DIR = PROJECT_ROOT / "data" / "bronze"
+
+# Fichier de sortie.
+OUTPUT_FILE = BRONZE_DIR / "fsi_2026_raw.csv"
 
 
-def apercu_tableaux(html: str) -> list[pd.DataFrame]:
-    """Liste tous les tableaux trouvés pour repérer le bon."""
-    tables = pd.read_html(html)
-    print(f"\n{len(tables)} tableau(x) détecté(s) :")
-    for i, t in enumerate(tables):
-        colonnes = list(t.columns)[:6]
-        print(f"  [{i}] {t.shape[0]} lignes x {t.shape[1]} col.  ->  {colonnes}")
-    return tables
+# ============================================================
+# 2. RÉCUPÉRATION DES DONNÉES
+# ============================================================
+
+async def get_fsi_data():
+    """Récupère les juridictions FSI via la réponse API du navigateur."""
+
+    jurisdictions_data = []
+
+    async with async_playwright() as p:
+        print("🚀 Démarrage de Chromium...")
+
+        browser = await p.chromium.launch(headless=True)
+        page = await browser.new_page()
+
+        async def handle_response(response):
+            """Intercepte la réponse de l'API FSI 2026."""
+
+            if "fsi2026_jurisdictions" not in response.url:
+                return
+
+            if not response.ok:
+                print(
+                    f"⚠️ Erreur API HTTP {response.status}"
+                )
+                return
+
+            try:
+                data = await response.json()
+
+                if not isinstance(data, list):
+                    print("⚠️ La réponse API n'est pas une liste JSON.")
+                    return
+
+                jurisdictions_data.extend(data)
+
+                print(
+                    f"✅ Réponse API récupérée : "
+                    f"{len(data)} lignes"
+                )
+
+            except Exception as error:
+                print(
+                    "⚠️ Erreur lors de la lecture "
+                    f"de la réponse API : {error}"
+                )
+
+        # Enregistrer l'écouteur avant de charger le site.
+        page.on("response", handle_response)
+
+        try:
+            print("🌐 Chargement de la page FSI...")
+
+            await page.goto(
+                URL,
+                wait_until="networkidle",
+                timeout=120000
+            )
+
+            # Laisser le temps aux requêtes API de se terminer.
+            print("⏳ Attente des données...")
+            await page.wait_for_timeout(10000)
+
+        finally:
+            await browser.close()
+
+    return jurisdictions_data
 
 
-def main():
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+# ============================================================
+# 3. PROGRAMME PRINCIPAL
+# ============================================================
 
-    html = recuperer_html_rendu()
-    tables = apercu_tableaux(html)
+async def main():
 
-    # --- A AJUSTER APRES LE PREMIER LANCEMENT -----------------------------
-    # Regarde l'aperçu ci-dessus et choisis l'index du tableau qui contient
-    # la colonne "Secrecy Score". Souvent 0, parfois 1.
-    index_tableau = 0
-    # ----------------------------------------------------------------------
+    print("=" * 60)
+    print("FSI 2026 — INGESTION BRONZE")
+    print("=" * 60)
 
-    df = tables[index_tableau]
+    # --------------------------------------------------------
+    # Récupération
+    # --------------------------------------------------------
 
-    horodatage = datetime.now().strftime("%Y%m%d")
-    sortie = OUTPUT_DIR / f"fsi_full_list_{horodatage}.csv"
-    df.to_csv(sortie, index=False)
+    data = await get_fsi_data()
 
-    print(f"\n[OK] Bronze enregistré : {sortie}")
-    print(f"     {df.shape[0]} lignes, {df.shape[1]} colonnes")
-    print(f"     Colonnes : {list(df.columns)}")
-    print("\nVérifie qu'une colonne 'Secrecy Score' (valeurs 0-100) est bien présente.")
+    if not data:
+        raise RuntimeError(
+            "Aucune donnée récupérée. "
+            "Vérifie le chargement du site et les requêtes API."
+        )
 
+    # --------------------------------------------------------
+    # Conversion en DataFrame
+    # --------------------------------------------------------
+
+    df = pd.DataFrame(data)
+
+    print(f"\n✅ Juridictions récupérées : {len(df)}")
+    print(f"✅ Colonnes récupérées : {len(df.columns)}")
+
+    # --------------------------------------------------------
+    # Contrôles de structure
+    # --------------------------------------------------------
+
+    required_columns = [
+        "jurisdiction_name_en",
+        "index_score",
+        "rank"
+    ]
+
+    missing_columns = [
+        column
+        for column in required_columns
+        if column not in df.columns
+    ]
+
+    if missing_columns:
+        raise ValueError(
+            "Colonnes attendues absentes de la réponse API : "
+            + ", ".join(missing_columns)
+        )
+
+    print("\n📋 Colonnes disponibles :")
+    for column in df.columns:
+        print(f" - {column}")
+
+    # Aperçu uniquement : les données ne sont pas transformées.
+    print("\n📊 Aperçu des données brutes :")
+    print(df.head(5).to_string(index=False))
+
+    # --------------------------------------------------------
+    # Export dans data/bronze
+    # --------------------------------------------------------
+
+    # Le dossier existe déjà dans ton projet.
+    # mkdir(exist_ok=True) évite une erreur s'il existe.
+    BRONZE_DIR.mkdir(parents=True, exist_ok=True)
+
+    df.to_csv(
+        OUTPUT_FILE,
+        index=False,
+        encoding="utf-8-sig"
+    )
+
+    print("\n" + "=" * 60)
+    print("✅ INGESTION TERMINÉE")
+    print("=" * 60)
+    print(f"📌 Nombre de lignes : {len(df)}")
+    print(f"📌 Nombre de colonnes : {len(df.columns)}")
+    print(f"💾 Fichier enregistré : {OUTPUT_FILE}")
+
+
+# ============================================================
+# 4. POINT D'ENTRÉE
+# ============================================================
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())
