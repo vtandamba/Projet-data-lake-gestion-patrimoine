@@ -21,8 +21,9 @@ Le script vide `data/silver/lucas/` avant d'écrire (les dossiers des autres mem
 | 2 | `data/bronze/lucas/eurofxref-hist.xml` | Taux de change de référence BCE |
 | 8 | `data/bronze/lucas/2026 Capital Gains Tax Rates in Europe  Tax Foundation Europe.csv` | Taux d'imposition des plus-values |
 
-Les fichiers de `data/` ne sont pas versionnés (voir `.gitignore`) ; le référentiel des devises est rangé avec le code
-car il est construit à la main.
+Dans `data/`, seule la zone silver est versionnée (voir `.gitignore`) : la copie de l'API Banque mondiale n'est pas
+dans Git et le script la retélécharge si elle est absente. Le référentiel des devises est rangé avec le code car il est
+construit à la main.
 
 ## Fichiers en sortie (silver, `data/silver/lucas/`)
 

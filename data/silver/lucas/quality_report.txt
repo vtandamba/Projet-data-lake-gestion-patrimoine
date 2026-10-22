@@ -1,0 +1,44 @@
+Transformation lancée le 2026-10-22 15:47:48
+
+== Source 1 (feuille 2) : Countries.csv ==
+  Classification Banque mondiale : 2025-Q3
+  Lu : 215 lignes x 9 colonnes
+  Colonnes vides supprimées : ['Unnamed: 6', 'Unnamed: 7', 'Unnamed: 8']
+  Ligne supprimée ZAR : Ancien code du Zaïre, doublon de COD (Congo, Dem. Rep.)
+  Ligne supprimée ANT : Antilles néerlandaises, dissoutes en 2010 (remplacées par CUW et SXM), aucune donnée
+  Régions complétées via l'API Banque mondiale : 75
+  Groupe de revenu JOR : « Lower middle income » (2025-Q3) / « Upper middle income » (API, classification actuelle)
+  Groupe de revenu FSM : « Lower middle income » (2025-Q3) / « Upper middle income » (API, classification actuelle)
+  Groupe de revenu PHL : « Lower middle income » (2025-Q3) / « Upper middle income » (API, classification actuelle)
+  Groupe de revenu LKA : « Lower middle income » (2025-Q3) / « Upper middle income » (API, classification actuelle)
+  Groupe de revenu TGO : « Low income » (2025-Q3) / « Lower middle income » (API, classification actuelle)
+  Groupe de revenu VNM : « Lower middle income » (2025-Q3) / « Upper middle income » (API, classification actuelle)
+  -> 6 pays ont changé de groupe : millésimes différents, income_group conservé tel que publié en 2025-Q3
+  Groupe de revenu VEN non classé en 2025-Q3 (API actuelle : Lower middle income) -> laissé vide
+  Valeurs manquantes après nettoyage : {'income_group': 1, 'currency_since': 200}
+  -> countries-silver.csv / .parquet : 213 lignes x 8 colonnes
+  -> currency_history-silver.csv / .parquet : 13 lignes x 4 colonnes
+
+== Source 2 : eurofxref-hist.xml ==
+  Lu : 221499 cotations, 7119 jours, 41 devises
+  Trou de cotation ISK : 3341 jours avant le 2018-02-01
+  Devise discontinue CYP (1999-01-04 -> 2007-12-31) : Passage à l'euro (2008)
+  Devise discontinue MTL (1999-01-04 -> 2007-12-31) : Passage à l'euro (2008)
+  Devise discontinue SIT (1999-01-04 -> 2006-12-29) : Passage à l'euro (2007)
+  Devise discontinue SKK (1999-01-04 -> 2008-12-31) : Passage à l'euro (2009)
+  Devise discontinue EEK (1999-01-04 -> 2010-12-31) : Passage à l'euro (2011)
+  Devise discontinue LVL (1999-01-04 -> 2013-12-31) : Passage à l'euro (2014)
+  Devise discontinue LTL (1999-01-04 -> 2014-12-31) : Passage à l'euro (2015)
+  Devise discontinue HRK (2005-04-01 -> 2022-12-30) : Passage à l'euro (2023)
+  Devise discontinue BGN (2000-07-19 -> 2025-12-31) : Passage à l'euro (2026)
+  Devise discontinue TRL (1999-01-04 -> 2004-12-31) : Redénomination en TRY (2005)
+  Devise discontinue ROL (1999-01-04 -> 2005-06-30) : Redénomination en RON (2005)
+  Devise discontinue RUB (2005-04-01 -> 2022-03-01) : Publication suspendue par la BCE (mars 2022)
+  -> ecb_exchange_rates-silver.csv / .parquet : 221499 lignes x 3 colonnes
+
+== Source 8 : Capital Gains Tax Rates in Europe (Tax Foundation) ==
+  Lu : 35 lignes x 3 colonnes
+  Nom harmonisé : « Czech Republic » (Tax Foundation) -> « Czechia » (BM)
+  Nom harmonisé : « Slovakia » (Tax Foundation) -> « Slovak Republic » (BM)
+  Nom harmonisé : « Turkey » (Tax Foundation) -> « Türkiye » (BM)
+  -> capital_gains_tax_europe-silver.csv / .parquet : 35 lignes x 4 colonnes

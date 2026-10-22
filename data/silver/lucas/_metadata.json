@@ -1,0 +1,81 @@
+{
+  "countries-silver": {
+    "source_name": "World Bank - Remittance Prices Worldwide (feuille Countries) + API v2 (régions)",
+    "source_files": [
+      "Countries.csv",
+      "worldbank_countries_api.json",
+      "country_currency.csv"
+    ],
+    "loaded_at": "2026-10-22T15:47:48",
+    "rows": 213,
+    "columns": [
+      "iso3",
+      "country_name",
+      "region",
+      "income_group",
+      "currency_code",
+      "currency_since",
+      "is_g20",
+      "is_g7"
+    ],
+    "classification_quarter": "2025-Q3"
+  },
+  "currency_history-silver": {
+    "source_name": "Référentiel construit manuellement (ISO 4217), changements depuis 2011",
+    "source_files": [
+      "country_currency.csv"
+    ],
+    "loaded_at": "2026-10-22T15:47:48",
+    "rows": 13,
+    "columns": [
+      "iso3",
+      "currency_code",
+      "valid_from",
+      "valid_to"
+    ]
+  },
+  "ecb_exchange_rates-silver": {
+    "source_name": "European Central Bank - euro foreign exchange reference rates",
+    "source_files": [
+      "eurofxref-hist.xml"
+    ],
+    "loaded_at": "2026-10-22T15:47:48",
+    "rows": 221499,
+    "columns": [
+      "date",
+      "currency_code",
+      "rate_per_eur"
+    ],
+    "rate_definition": "rate_per_eur = unités de devise pour 1 EUR ; EUR non listé (taux = 1)",
+    "discontinued_currencies": {
+      "CYP": "Passage à l'euro (2008)",
+      "MTL": "Passage à l'euro (2008)",
+      "SIT": "Passage à l'euro (2007)",
+      "SKK": "Passage à l'euro (2009)",
+      "EEK": "Passage à l'euro (2011)",
+      "LVL": "Passage à l'euro (2014)",
+      "LTL": "Passage à l'euro (2015)",
+      "HRK": "Passage à l'euro (2023)",
+      "BGN": "Passage à l'euro (2026)",
+      "TRL": "Redénomination en TRY (2005)",
+      "ROL": "Redénomination en RON (2005)",
+      "RUB": "Publication suspendue par la BCE (mars 2022)"
+    }
+  },
+  "capital_gains_tax_europe-silver": {
+    "source_name": "Tax Foundation Europe - 2026 Capital Gains Tax Rates",
+    "source_files": [
+      "2026 Capital Gains Tax Rates in Europe  Tax Foundation Europe.csv"
+    ],
+    "loaded_at": "2026-10-22T15:47:48",
+    "rows": 35,
+    "columns": [
+      "iso3",
+      "country_name",
+      "capital_gains_tax_rate",
+      "comments"
+    ],
+    "tax_year": 2026,
+    "rate_definition": "taux marginal supérieur d'imposition des plus-values, en fraction"
+  }
+}
