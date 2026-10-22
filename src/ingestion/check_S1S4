@@ -1,0 +1,20 @@
+from pathlib import Path
+import pandas as pd
+
+BRONZE = Path("data/bronze")
+
+for fichier in sorted(BRONZE.rglob("*")):
+    if not fichier.is_file():
+        continue
+    taille_mo = fichier.stat().st_size / 1_000_000
+    print(f"\n=== {fichier}  ({taille_mo:.1f} Mo) ===")
+
+    if fichier.suffix.lower() == ".csv":
+        df = pd.read_csv(fichier, nrows=5, low_memory=False)
+        print(list(df.columns))
+
+    elif fichier.suffix.lower() in (".xlsx", ".xls"):
+        feuilles = pd.read_excel(fichier, sheet_name=None, nrows=5)
+        for nom_feuille, df in feuilles.items():
+            print(f"  feuille : {nom_feuille}")
+            print(" ", list(df.columns))
