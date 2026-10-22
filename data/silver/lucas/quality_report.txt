@@ -1,4 +1,4 @@
-Transformation lancée le 2026-10-22 15:47:48
+Transformation lancée le 2026-10-22 15:52:30
 
 == Source 1 (feuille 2) : Countries.csv ==
   Classification Banque mondiale : 2025-Q3
@@ -16,8 +16,8 @@ Transformation lancée le 2026-10-22 15:47:48
   -> 6 pays ont changé de groupe : millésimes différents, income_group conservé tel que publié en 2025-Q3
   Groupe de revenu VEN non classé en 2025-Q3 (API actuelle : Lower middle income) -> laissé vide
   Valeurs manquantes après nettoyage : {'income_group': 1, 'currency_since': 200}
-  -> countries-silver.csv / .parquet : 213 lignes x 8 colonnes
-  -> currency_history-silver.csv / .parquet : 13 lignes x 4 colonnes
+  -> countries-silver.csv : 213 lignes x 8 colonnes
+  -> currency_history-silver.csv : 13 lignes x 4 colonnes
 
 == Source 2 : eurofxref-hist.xml ==
   Lu : 221499 cotations, 7119 jours, 41 devises
@@ -34,11 +34,11 @@ Transformation lancée le 2026-10-22 15:47:48
   Devise discontinue TRL (1999-01-04 -> 2004-12-31) : Redénomination en TRY (2005)
   Devise discontinue ROL (1999-01-04 -> 2005-06-30) : Redénomination en RON (2005)
   Devise discontinue RUB (2005-04-01 -> 2022-03-01) : Publication suspendue par la BCE (mars 2022)
-  -> ecb_exchange_rates-silver.csv / .parquet : 221499 lignes x 3 colonnes
+  -> ecb_exchange_rates-silver.csv : 221499 lignes x 3 colonnes
 
 == Source 8 : Capital Gains Tax Rates in Europe (Tax Foundation) ==
   Lu : 35 lignes x 3 colonnes
   Nom harmonisé : « Czech Republic » (Tax Foundation) -> « Czechia » (BM)
   Nom harmonisé : « Slovakia » (Tax Foundation) -> « Slovak Republic » (BM)
   Nom harmonisé : « Turkey » (Tax Foundation) -> « Türkiye » (BM)
-  -> capital_gains_tax_europe-silver.csv / .parquet : 35 lignes x 4 colonnes
+  -> capital_gains_tax_europe-silver.csv : 35 lignes x 4 colonnes

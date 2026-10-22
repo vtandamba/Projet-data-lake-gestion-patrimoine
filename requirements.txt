@@ -1,5 +1,4 @@
 playwright
 pandas
 lxml
-pyarrow
 requests

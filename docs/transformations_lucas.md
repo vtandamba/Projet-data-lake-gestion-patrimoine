@@ -8,7 +8,7 @@ python src/transformation/transform_lucas_silver.py
 
 À lancer depuis la racine du dépôt. Option `--refresh` : re-télécharge la liste des pays depuis l'API Banque mondiale
 (sinon la copie locale est utilisée ; elle est téléchargée automatiquement si elle est absente).
-Dépendances : `pandas`, `pyarrow` (Parquet), `requests` (uniquement avec `--refresh`).
+Dépendances : `pandas`, `requests` (uniquement avec `--refresh`).
 Le script vide `data/silver/lucas/` avant d'écrire (les dossiers des autres membres ne sont pas touchés). **Fermer les fichiers silver ouverts dans Excel avant de le lancer** (Windows verrouille les fichiers ouverts).
 
 ## Fichiers en entrée (bronze)
@@ -36,7 +36,24 @@ construit à la main.
 | `_metadata.json` | — | Source, fichiers d'origine, date de chargement et constantes de chaque table |
 | `quality_report.txt` | — | Journal des contrôles et anomalies détectées |
 
-Chaque table est écrite en CSV (UTF-8) et en Parquet. Les types (dates, booléens, catégorie ordonnée) ne sont conservés que dans le Parquet : c'est le format à privilégier.
+Chaque table est écrite en CSV (UTF-8, séparateur `,`). Le CSV ne stocke pas les types : il faut les redonner au chargement.
+
+### Charger les tables avec leurs types
+
+```python
+import pandas as pd
+
+SILVER = "data/silver/lucas"
+INCOME_GROUPS = ["Low income", "Lower middle income", "Upper middle income", "High income"]
+
+countries = pd.read_csv(f"{SILVER}/countries-silver.csv", parse_dates=["currency_since"])
+countries["income_group"] = pd.Categorical(countries["income_group"], categories=INCOME_GROUPS, ordered=True)
+currency_history = pd.read_csv(f"{SILVER}/currency_history-silver.csv", parse_dates=["valid_from", "valid_to"])
+rates = pd.read_csv(f"{SILVER}/ecb_exchange_rates-silver.csv", parse_dates=["date"])
+cgt = pd.read_csv(f"{SILVER}/capital_gains_tax_europe-silver.csv")
+```
+
+Les colonnes `is_g20` / `is_g7` (`True` / `False`) et les nombres sont reconnus automatiquement par pandas.
 
 ```
 countries ──iso3──> capital_gains_tax_europe
@@ -56,7 +73,7 @@ countries ──iso3──> capital_gains_tax_europe
 | Taux et pourcentages | en **fraction** : 0.275 = 27,5 % |
 | Valeurs manquantes | null (cellule vide en CSV), jamais `..`, `-` ou chaîne vide |
 | **Pas de répétition** | Aucune colonne constante, aucune colonne calculable à partir d'une autre, aucune ligne en double. Les informations valables pour toute une table (source, date de chargement, trimestre de classification, année fiscale) sont dans `_metadata.json`. **Le script refuse d'écrire une table qui ne respecte pas cette règle.** |
-| Nom des fichiers | `<table>-silver.csv` / `<table>-silver.parquet` |
+| Nom des fichiers | `<table>-silver.csv` |
 
 ---
 
@@ -83,7 +100,7 @@ countries ──iso3──> capital_gains_tax_europe
      des données RPW, et **VEN reste vide** : il n'était pas classé en 2025-Q3 (l'API actuelle le classe Lower middle income).
      Le détail est écrit par le script dans `quality_report.txt`.
 5. `G8/G20` → `is_g20` et **`is_g7`** (liste G7 explicite, sans la Russie).
-6. `income_group` typé en **catégorie ordonnée** (Low < Lower middle < Upper middle < High) : on peut trier et comparer sans colonne de rang.
+6. `income_group` contrôlé : uniquement les 4 libellés Banque mondiale, dont l'ordre (Low < Lower middle < Upper middle < High) se redonne au chargement.
 7. **`currency_code`** (devise actuelle) et **`currency_since`** (date d'entrée en vigueur, uniquement si elle a changé depuis 2011).
 8. **`lending_category` supprimée** (catégorie de prêt IDA/IBRD/Blend, sans rapport avec l'objet du projet).
 
@@ -92,7 +109,7 @@ countries ──iso3──> capital_gains_tax_europe
 | `iso3` | texte | Code pays (Banque mondiale : `KSV` pour le Kosovo, `CHI` pour les îles Anglo-Normandes) |
 | `country_name` | texte | Nom Banque mondiale |
 | `region` | texte | Région Banque mondiale (7 modalités, aucune valeur nulle) |
-| `income_group` | catégorie ordonnée | Groupe de revenu, classification 2025-Q3 (null pour VEN, non classé à cette date) |
+| `income_group` | texte (4 modalités ordonnées) | Groupe de revenu, classification 2025-Q3 (null pour VEN, non classé à cette date) |
 | `currency_code` | texte | Devise actuelle (ISO 4217) |
 | `currency_since` | date | Date de passage à la devise actuelle ; null = inchangée depuis 2011 (13 pays renseignés) |
 | `is_g20` | booléen | Membre du G20 (19 pays) |
@@ -175,7 +192,7 @@ Pour connaître la devise d'un pays à une date `d` : la ligne de `currency_hist
 | Source 1 | `Lending category` | Supprimée | Sans rapport avec le projet, 70 nulls |
 | Source 1 | `G8/G20` | Remplacée par `is_g20`, `is_g7` | Deux informations dans une colonne ; G8 obsolète |
 | Source 1 | date de classification (titre) | → `_metadata.json` | Une seule valeur pour toute la table |
-| Source 1 | rang du groupe de revenu | Non créé | L'ordre est porté par le type catégorie ordonnée |
+| Source 1 | rang du groupe de revenu | Non créé | L'ordre se redonne au chargement (catégorie ordonnée) |
 | Référentiel | devises actuelles | Non dupliquées | Déjà dans `countries.currency_code` |
 | Source 2 | lignes EUR, `eur_per_unit`, `is_discontinued` | Non créées | Constante, calcul, propriété de la devise |
 | Toutes | `source_name`, `source_file`, `loaded_at` | → `_metadata.json` | Identiques sur toutes les lignes |

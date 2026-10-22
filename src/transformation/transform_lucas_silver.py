@@ -25,7 +25,7 @@ Conventions silver (communes à toutes les tables) :
     - aucune colonne constante ni dérivable d'une autre : les informations valables pour toute
       une table (source, date de chargement, année fiscale...) sont dans _metadata.json.
 
-Sorties (data/silver/lucas/) : <table>-silver.csv (UTF-8) et <table>-silver.parquet,
+Sorties (data/silver/lucas/) : <table>-silver.csv (UTF-8),
 _metadata.json et un rapport de contrôle qualité (quality_report.txt).
 """
 import csv
@@ -111,7 +111,6 @@ def save(df, name, source_name, source_files, **table_constants):
 
     SILVER_DIR.mkdir(parents=True, exist_ok=True)
     df.to_csv(SILVER_DIR / f"{name}-silver.csv", index=False, encoding="utf-8", date_format="%Y-%m-%d")
-    df.to_parquet(SILVER_DIR / f"{name}-silver.parquet", index=False)
     metadata[f"{name}-silver"] = {
         "source_name": source_name,
         "source_files": source_files,
@@ -120,7 +119,7 @@ def save(df, name, source_name, source_files, **table_constants):
         "columns": list(df.columns),
         **table_constants,
     }
-    log(f"  -> {name}-silver.csv / .parquet : {len(df)} lignes x {df.shape[1]} colonnes")
+    log(f"  -> {name}-silver.csv : {len(df)} lignes x {df.shape[1]} colonnes")
 
 
 def clean_silver_dir():
@@ -252,11 +251,10 @@ def transform_countries(refresh_api=False):
     df["is_g7"] = df["iso3"].isin(G7_ISO3)
     df = df.drop(columns="g8_g20")
 
-    # Groupe de revenu en catégorie ordonnée (Low < Lower middle < Upper middle < High) :
-    # l'ordre est porté par le type Parquet, sans colonne de rang en double
+    # Groupe de revenu : uniquement les 4 libellés Banque mondiale (l'ordre Low < ... < High
+    # se redonne au chargement, voir la documentation ; pas de colonne de rang en double)
     unknown = set(df["income_group"].dropna()) - set(INCOME_GROUPS)
     assert not unknown, f"Groupe de revenu inattendu : {unknown}"
-    df["income_group"] = pd.Categorical(df["income_group"], categories=INCOME_GROUPS, ordered=True)
 
     # Devise courante du pays (lien avec les taux BCE) et date depuis laquelle elle est en
     # vigueur, si elle a changé depuis 2011 (null = inchangée sur toute la période)
