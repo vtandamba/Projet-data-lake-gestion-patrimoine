@@ -12,11 +12,11 @@ Transformations appliquées (= actions correctives à documenter) :
   4. Contrôle des types + arrondi du score à 2 décimales
 
 Le script affiche un bilan AVANT / APRÈS et l'écrit dans un rapport
-(reports/fsi_transformation.txt) pour l'analyse quantitative du barème.
+(reports/transform_fsi.txt) pour l'analyse quantitative du barème.
 
 Entrée : data/bronze/fsi_2026_raw.csv
 Sortie : data/silver/fsi_2026_silver.csv
-Rapport : reports/fsi_transformation.txt
+Rapport : reports/transform_fsi.txt
 
 À placer dans : src/transformation/transform_fsi_silver.py
 Lancer depuis la racine du projet :
@@ -39,7 +39,7 @@ SILVER_FILE = SILVER_DIR / "fsi_2026_silver.csv"
 
 # Un seul dossier reports/ à la racine, fichiers nommés <source>_<étape>.txt
 REPORTS_DIR = PROJECT_ROOT / "reports"
-REPORT_FILE = REPORTS_DIR / "fsi_transformation.txt"
+REPORT_FILE = REPORTS_DIR / "transform_fsi.txt"
 
 # ------------------------------------------------------------------
 # Cas particuliers de codes pays non standard

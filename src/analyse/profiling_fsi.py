@@ -15,7 +15,7 @@ défaut comme une valeur manquante. On neutralise ce comportement avec
 na_values / keep_default_na pour que la Namibie ne disparaisse pas.
 
 Entrée : data/bronze/fsi_2026_raw.csv
-Sortie : affichage console + rapport écrit dans reports/fsi_profiling.txt
+Sortie : affichage console + rapport écrit dans reports/profiling_fsi.txt
 
 À placer dans : src/analyse/profiling_fsi.py
 Lancer depuis la racine du projet :  python src/analyse/profiling_fsi.py
@@ -33,7 +33,7 @@ BRONZE_FILE = PROJECT_ROOT / "data" / "bronze" / "fsi_2026_raw.csv"
 
 # Un seul dossier reports/ à la racine, fichiers nommés <source>_<étape>.txt
 REPORTS_DIR = PROJECT_ROOT / "reports"
-REPORT_FILE = REPORTS_DIR / "fsi_profiling.txt"
+REPORT_FILE = REPORTS_DIR / "profiling_fsi.txt"
 
 # On accumule toutes les lignes pour les afficher ET les écrire dans le rapport.
 _lignes_rapport = []
