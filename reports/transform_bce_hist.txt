@@ -1,0 +1,33 @@
+============================================================
+TRANSFORMATION BCE — BRONZE -> SILVER
+============================================================
+
+[AVANT] 7120 lignes (jours), 43 colonnes
+[T1] Colonne(s) vide(s) retirée(s) : ['Unnamed: 42']
+[T2] Colonne Date convertie en type date
+[T3] Données triées par date croissante
+     de 1999-01-04 à 2026-10-22
+[T4] Passage en format long : 291920 lignes (date x devise)
+[T5] Lignes sans taux supprimées : 70392
+
+[APRÈS] 221528 lignes, 3 colonnes
+Colonnes finales : date, devise, taux
+Nombre de devises présentes : 41
+
+Valeurs manquantes par colonne :
+ - date       0
+ - devise     0
+ - taux       0
+
+Aperçu (5 premières lignes) :
+      date devise   taux
+1999-01-04    USD 1.1789
+1999-01-05    USD 1.1790
+1999-01-06    USD 1.1743
+1999-01-07    USD 1.1632
+1999-01-08    USD 1.1659
+
+============================================================
+[OK] Fichier silver enregistré :
+     C:\Users\victo\OneDrive - Université de Tours\M2_DS4SC\data_lakes\Projet-data-lake-gestion-patrimoine\data\silver\bce_hist_silver.csv
+============================================================

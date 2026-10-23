@@ -72,11 +72,11 @@ Doublons sur la Date          : 0
 ============================================================
 5. DEVISES ACTIVES / MORTES
 ============================================================
-Devises actives aujourd'hui (27) :
-   USD, JPY, CYP, CZK, DKK, EEK, GBP, HUF, LTL, LVL, MTL, PLN, ROL, SEK, SIT, SKK, CHF, ISK, NOK, TRL, AUD, CAD, HKD, KRW, NZD, SGD, ZAR
+Devises actives aujourd'hui (29) :
+   USD, JPY, CZK, DKK, GBP, HUF, PLN, RON, SEK, CHF, ISK, NOK, TRY, AUD, BRL, CAD, CNY, HKD, IDR, ILS, INR, KRW, MXN, MYR, NZD, PHP, SGD, THB, ZAR
 
-Devises mortes / suspendues (14) :
-   BGN, RON, HRK, RUB, TRY, BRL, CNY, IDR, ILS, INR, MXN, MYR, PHP, THB
+Devises mortes / suspendues (12) :
+   BGN, CYP, EEK, LTL, LVL, MTL, ROL, SIT, SKK, HRK, RUB, TRL
 
 ============================================================
 6. APERÇU

@@ -115,7 +115,9 @@ def main():
     #    (morte = pas de valeur sur la dernière ligne disponible)
     # --------------------------------------------------------------
     titre("5. DEVISES ACTIVES / MORTES")
-    derniere_ligne = df[devises].iloc[-1]
+       
+    idx_recent = pd.to_datetime(df["Date"], errors="coerce").idxmax()
+    derniere_ligne = df.loc[idx_recent, devises]
     actives = [d for d in devises if pd.notna(derniere_ligne[d])]
     mortes = [d for d in devises if pd.isna(derniere_ligne[d])]
     sortie(f"Devises actives aujourd'hui ({len(actives)}) :")
