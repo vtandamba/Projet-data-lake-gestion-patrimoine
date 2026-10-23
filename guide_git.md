@@ -8,23 +8,28 @@ pas poussé.
 ## Le cycle de travail (à partager au groupe)
 
 **1. Avant de commencer à travailler — toujours partir à jour**
+
 ```
 git checkout main
 git pull
 git checkout victoria      # ta branche (remplace par ton prénom)
 git merge main             # tu récupères le travail des autres dans ta branche
 ```
+
 Ce réflexe évite 90 % des conflits : tu travailles toujours sur une base récente.
 
 **2. Pendant le travail — committe souvent sur ta branche**
+
 ```
 git add .
 git commit -m "message clair"
 git push                   # sauvegarde ta branche sur GitHub (sécurité)
 ```
+
 Pousser ta branche régulièrement = ton travail est sauvegardé même si ton PC lâche.
 
 **3. Quand une partie est finie et testée — la faire remonter dans main**
+
 ```
 git checkout main
 git pull                   # au cas où quelqu'un a poussé entre-temps
@@ -56,7 +61,9 @@ Le message disparaît une fois que les deux branches ont le même dossier
 (fais `git merge main` dans ta branche).
 
 **Vérifier où tu en es à tout moment :**
+
 ```
 git status
 ```
+
 « nothing to commit, working tree clean » = tout est propre et à jour.

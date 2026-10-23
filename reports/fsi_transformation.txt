@@ -1,0 +1,30 @@
+============================================================
+TRANSFORMATION FSI 2026 — BRONZE -> SILVER
+============================================================
+
+[AVANT] 141 lignes, 15 colonnes
+
+[OK] Tous les codes pays convertis en ISO3.
+
+[APRÈS] 141 lignes, 4 colonnes
+
+Colonnes finales : iso3, jurisdiction_name_fr, fsi_2026_score, fsi_2026_rank
+
+Valeurs manquantes par colonne :
+ - iso3                   0
+ - jurisdiction_name_fr   0
+ - fsi_2026_score         0
+ - fsi_2026_rank          0
+
+Aperçu :
+iso3 jurisdiction_name_fr  fsi_2026_score  fsi_2026_rank
+ AND              Andorre           54.47             87
+ ARE  Emirats Arabes Unis           79.20              5
+ ATG   Antigua-et-Barbuda           78.51            138
+ AIA             Anguilla           76.20             99
+ ALB              Albanie           48.57            122
+
+============================================================
+[OK] Fichier silver enregistré :
+     C:\Users\victo\OneDrive - Université de Tours\M2_DS4SC\data_lakes\Projet-data-lake-gestion-patrimoine\data\silver\fsi_2026_silver.csv
+============================================================
