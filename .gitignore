@@ -21,6 +21,8 @@ Thumbs.db
 .DS_Store
 
 # Données du data lake : on ne versionne que la structure (.gitkeep)
-# data/**
-# !data/**/
-# !data/**/.gitkeep
+data/**
+!data/**/
+!data/**/.gitkeep
+# Exception : la zone silver (données nettoyées) est versionnée
+!data/silver/**
