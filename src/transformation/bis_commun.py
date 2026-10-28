@@ -17,6 +17,15 @@ PERIMETRE_ISO2 = {
 }
 ZONE_EURO = "XM"
 
+# ISO2 (codes BIS) -> ISO3 (code commun à toutes les autres sources du projet).
+# XM (zone euro) n'est pas un pays : code EMU, utilisé par la Banque mondiale.
+ISO2_VERS_ISO3 = {
+    "AT": "AUT", "BE": "BEL", "BG": "BGR", "HR": "HRV", "CZ": "CZE", "EE": "EST",
+    "FR": "FRA", "DE": "DEU", "HU": "HUN", "IT": "ITA", "LV": "LVA", "LT": "LTU",
+    "NL": "NLD", "NO": "NOR", "PL": "POL", "PT": "PRT", "RO": "ROU", "ES": "ESP",
+    "SE": "SWE", "CH": "CHE", "TR": "TUR", "UA": "UKR", "GB": "GBR", "XM": "EMU",
+}
+
 
 def lire_csv_bis(nom_fichier: str, colonnes=None) -> pd.DataFrame:
     """Lit un CSV BIS en texte. Les en-têtes 'FREQ:Frequency' deviennent 'freq'."""
@@ -42,7 +51,22 @@ def separer_code_libelle(serie: pd.Series) -> tuple[pd.Series, pd.Series]:
     return code, libelle
 
 
+def ajouter_iso3(df: pd.DataFrame) -> pd.DataFrame:
+    """Ajoute la colonne iso3 juste après ref_area (ref_area est gardé : traçabilité
+    et requêtes existantes). Toutes les jointures du projet peuvent se faire sur iso3."""
+    if "ref_area" not in df.columns or "iso3" in df.columns:
+        return df
+    df = df.copy()
+    iso3 = df["ref_area"].map(ISO2_VERS_ISO3)
+    inconnus = sorted(df.loc[iso3.isna(), "ref_area"].unique())
+    if inconnus:
+        raise ValueError(f"Codes BIS sans ISO3 : {inconnus}")
+    df.insert(df.columns.get_loc("ref_area") + 1, "iso3", iso3)
+    return df
+
+
 def ecrire_silver(df: pd.DataFrame, nom_fichier: str) -> Path:
+    df = ajouter_iso3(df)
     DOSSIER_SILVER_BIS.mkdir(parents=True, exist_ok=True)
     chemin = DOSSIER_SILVER_BIS / nom_fichier
     df.to_csv(chemin, index=False, encoding="utf-8")
