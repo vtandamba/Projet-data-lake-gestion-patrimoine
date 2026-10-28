@@ -1,0 +1,116 @@
+
+============================================================
+PROFILING BRONZE — FSI 2026
+============================================================
+
+============================================================
+1. DIMENSIONS
+============================================================
+Nombre de lignes   : 141
+Nombre de colonnes : 15
+
+============================================================
+2. COLONNES ET TYPES
+============================================================
+ - scoring_timestamp              str
+ - methodology_id                 str
+ - scoring_id                     int64
+ - jurisdiction_id                str
+ - jurisdiction_name_en           str
+ - jurisdiction_name_fr           str
+ - jurisdiction_name_es           str
+ - jurisdiction_name_ar           str
+ - jurisdiction_name_pt           str
+ - jurisdiction_regions           str
+ - index_score                    float64
+ - index_value                    float64
+ - index_share                    float64
+ - rank                           int64
+ - gsw                            float64
+
+============================================================
+3. VALEURS MANQUANTES (par colonne)
+============================================================
+ - scoring_timestamp                 0 (0.0 %)
+ - methodology_id                    0 (0.0 %)
+ - scoring_id                        0 (0.0 %)
+ - jurisdiction_id                   0 (0.0 %)
+ - jurisdiction_name_en              0 (0.0 %)
+ - jurisdiction_name_fr              0 (0.0 %)
+ - jurisdiction_name_es              0 (0.0 %)
+ - jurisdiction_name_ar              0 (0.0 %)
+ - jurisdiction_name_pt              0 (0.0 %)
+ - jurisdiction_regions              0 (0.0 %)
+ - index_score                       0 (0.0 %)
+ - index_value                       0 (0.0 %)
+ - index_share                       0 (0.0 %)
+ - rank                              0 (0.0 %)
+ - gsw                               0 (0.0 %)
+
+============================================================
+4. DOUBLONS
+============================================================
+Lignes entièrement dupliquées : 0
+Doublons sur jurisdiction_id  : 0
+
+============================================================
+5. VALEURS DISTINCTES (par colonne)
+============================================================
+ - scoring_timestamp              1 valeurs distinctes
+ - methodology_id                 1 valeurs distinctes
+ - scoring_id                     1 valeurs distinctes
+ - jurisdiction_id                141 valeurs distinctes
+ - jurisdiction_name_en           141 valeurs distinctes
+ - jurisdiction_name_fr           141 valeurs distinctes
+ - jurisdiction_name_es           141 valeurs distinctes
+ - jurisdiction_name_ar           141 valeurs distinctes
+ - jurisdiction_name_pt           140 valeurs distinctes
+ - jurisdiction_regions           84 valeurs distinctes
+ - index_score                    141 valeurs distinctes
+ - index_value                    141 valeurs distinctes
+ - index_share                    141 valeurs distinctes
+ - rank                           141 valeurs distinctes
+ - gsw                            141 valeurs distinctes
+
+============================================================
+6. STATISTIQUES — colonnes clés
+============================================================
+
+index_score :
+   min    : 25.142000000000003
+   max    : 79.20016666666666
+   moyenne: 60.93
+
+index_value :
+   min    : 5.81770244305531
+   max    : 2029.1642809358923
+   moyenne: 219.44
+
+index_share :
+   min    : 0.0001880215551192
+   max    : 0.0655802917781463
+   moyenne: 0.01
+
+rank :
+   min    : 1
+   max    : 141
+   moyenne: 71.00
+
+gsw :
+   min    : 5.92953109e-09
+   max    : 0.249443560838699
+   moyenne: 0.01
+
+============================================================
+7. APERÇU (5 premières lignes)
+============================================================
+jurisdiction_id jurisdiction_name_fr  index_score  rank
+             AD              Andorre    54.474500    87
+             AE  Emirats Arabes Unis    79.200167     5
+             AG   Antigua-et-Barbuda    78.509667   138
+             AI             Anguilla    76.203500    99
+             AL              Albanie    48.570833   122
+
+============================================================
+FIN DU PROFILING
+============================================================

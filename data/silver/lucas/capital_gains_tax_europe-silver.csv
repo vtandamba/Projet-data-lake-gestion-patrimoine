@@ -1,0 +1,36 @@
+iso3,country_name,capital_gains_tax_rate,comments
+AUT,Austria,0.275,
+BEL,Belgium,0.1,"Capital gains from the sale of financial assets exceeding the annual exemption of 10,000 EUR will be taxed at 10%. Each year, 10% of the annual exemption can be carried forward for a maximum of five years. Capital gains from shareholdings of at least 20% are taxed at progressive rates up to 10%. Capital gains realized outside the normal management of someone’s private assets that are considered speculative gains remain subject to a 33% taxation."
+BGR,Bulgaria,0.1,Capital gains are subject to flat PIT rate at 10%.
+HRV,Croatia,0.12,
+CYP,Cyprus,0.0,Shares listed on any recognised stock exchange are excluded from CGT.
+CZE,Czechia,0.0,Capital gains included in PIT but exempt if shares of a joint stock company were held for at least three years (five years if limited liability company).
+DNK,Denmark,0.42,"Capital income from shares up to DKK 79,400 is taxed at 27%. Share income in excess of this amount is taxed at 42%."
+EST,Estonia,0.22,Capital gains are subject to PIT. From 20% in 2024
+FIN,Finland,0.34,"Capital gains are fully taxable and included in the taxable capital income subject to 30% tax rate up to taxable capital income of EUR 30,000 and 34% tax rate on the excess."
+FRA,France,0.34,"Flat 30% tax on capital gains, plus 4% for high-income earners."
+DEU,Germany,0.264,"Flat 25% tax on capital gains, plus a 5.5% solidarity surcharge."
+GEO,Georgia,0.0,Capital gains from shares held for more than two years is generally exempt from PIT.
+GRC,Greece,0.0,Capital gains only applies to the sale of shares at a 15% rate if an individual holds at least 0.5% of the share capital of the listed entity.
+HUN,Hungary,0.15,Capital gains are subject to flat PIT rate at 15%.
+ISL,Iceland,0.22,"Exemption for capital income up to ISK 300,000 per year."
+IRL,Ireland,0.33,"Annual gains of up to EUR 1,270 for an individual are exempt from CGT."
+ITA,Italy,0.26,
+LVA,Latvia,0.285,"Flat 25.5% on capital gains, plus 3% for high-income earners."
+LTU,Lithuania,0.2,"Capital gains are subject to PIT, with a top rate of 20%."
+LUX,Luxembourg,0.0,Capital gains are tax-exempt if a movable asset (such as shares) was held for at least six months and is owned by a non-large shareholder. Taxed at progressive rates if held <6 months. aAdependency contribution of 1.4 percent is due for individuals subject to the Luxembourg social security system on the taxable part of the gains.
+MLT,Malta,0.0,Transfers of shares listed on recognized stock exchanges are usually exempt from PIT.
+MDA,Moldova,0.06,Capital gains are taxed at 50% of the PIT rate.
+NLD,Netherlands,0.36,"Net asset value is taxed at a flat rate of 36% on a deemed annual return (the deemed annual return varies by the total value of assets owned) above an annual amount of EUR 59,357 per person."
+NOR,Norway,0.378,Capital gains are taxed at a 22% rate. A multiplier of 1.72 before taxation applies to gains from the sale of shares.
+POL,Poland,0.19,
+PRT,Portugal,0.196,"PIT applies if the assets were held for less than one year. Otherwise, a flat capital gains tax rate of 28 percent from the sale of shares and other securities. Capital gains income is 10 percent tax-free for holding periods between 2 and 5 years, 20 percent for 5 to 8 years, and 30 percent after 8 years."
+ROU,Romania,0.01,Gains derived from the transfer of securities and from operations with derivative financial instruments through intermediaries are taxed at 3 percent for holding periods less than 356 days and at 1 percent thereafter.
+SVK,Slovak Republic,0.0,Shares are exempt from capital gains tax if they were held for more than one year and are not part of the business assets of the taxpayer.
+SVN,Slovenia,0.0,Capital gains rate of 0% if the asset was held for more than 15 years (rate up to 25% for periods less than 15 years).
+ESP,Spain,0.3,
+SWE,Sweden,0.3,
+CHE,Switzerland,0.0,Capital gains on movable assets such as shares are normally tax-exempt.
+TUR,Türkiye,0.0,Shares that are traded on the Stock Exchange and that have been held for at least one year are tax-exempt (two years for joint stock companies).
+UKR,Ukraine,0.195,Capital gains are subject to PIT.
+GBR,United Kingdom,0.24,

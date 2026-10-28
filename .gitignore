@@ -24,3 +24,5 @@ Thumbs.db
 data/**
 !data/**/
 !data/**/.gitkeep
+# Exception : la zone silver (données nettoyées) est versionnée
+!data/silver/**

@@ -1,0 +1,227 @@
+iso3,currency_code,valid_from,valid_to,note
+AFG,AFN,,,
+ALB,ALL,,,
+DZA,DZD,,,
+ASM,USD,,,
+AND,EUR,,,
+AGO,AOA,,,
+ATG,XCD,,,Dollar des Caraïbes orientales
+ARG,ARS,,,
+ARM,AMD,,,
+ABW,AWG,,,
+AUS,AUD,,,
+AUT,EUR,,,
+AZE,AZN,,,
+BHS,BSD,,,
+BHR,BHD,,,
+BGD,BDT,,,
+BRB,BBD,,,
+BLR,BYR,,2016-06-30,Redénomination BYR -> BYN
+BLR,BYN,2016-07-01,,
+BEL,EUR,,,
+BLZ,BZD,,,
+BEN,XOF,,,Franc CFA UEMOA
+BMU,BMD,,,
+BTN,BTN,,,Ngultrum (roupie indienne aussi acceptée)
+BOL,BOB,,,
+BIH,BAM,,,
+BWA,BWP,,,
+BRA,BRL,,,
+BRN,BND,,,
+BGR,BGN,,2025-12-31,Passage à l'euro le 2026-01-01
+BGR,EUR,2026-01-01,,
+BFA,XOF,,,Franc CFA UEMOA
+BDI,BIF,,,
+CPV,CVE,,,
+KHM,KHR,,,
+CMR,XAF,,,Franc CFA CEMAC
+CAN,CAD,,,
+CYM,KYD,,,
+CAF,XAF,,,Franc CFA CEMAC
+TCD,XAF,,,Franc CFA CEMAC
+CHI,GBP,,,Livres de Jersey et Guernesey à parité avec GBP
+CHL,CLP,,,
+CHN,CNY,,,
+COL,COP,,,
+COM,KMF,,,
+COD,CDF,,,
+CRI,CRC,,,
+CIV,XOF,,,Franc CFA UEMOA
+HRV,HRK,,2022-12-31,Passage à l'euro le 2023-01-01
+HRV,EUR,2023-01-01,,
+CUB,CUP,,,
+CUW,ANG,,2025-03-30,Florin des Antilles néerlandaises remplacé par le florin caribéen
+CUW,XCG,2025-03-31,,
+CYP,EUR,,,
+CZE,CZK,,,
+DNK,DKK,,,
+DJI,DJF,,,
+DMA,XCD,,,Dollar des Caraïbes orientales
+DOM,DOP,,,
+ECU,USD,,,
+EGY,EGP,,,
+SLV,USD,,,Bitcoin également cours légal 2021-2025
+GNQ,XAF,,,Franc CFA CEMAC
+ERI,ERN,,,
+EST,EUR,,,
+ETH,ETB,,,
+FRO,DKK,,,Couronne féroïenne à parité avec DKK
+FJI,FJD,,,
+FIN,EUR,,,
+FRA,EUR,,,
+PYF,XPF,,,Franc CFP
+GAB,XAF,,,Franc CFA CEMAC
+GMB,GMD,,,
+GEO,GEL,,,
+DEU,EUR,,,
+GHA,GHS,,,
+GRC,EUR,,,
+GRL,DKK,,,
+GRD,XCD,,,Dollar des Caraïbes orientales
+GUM,USD,,,
+GTM,GTQ,,,
+GIN,GNF,,,
+GNB,XOF,,,Franc CFA UEMOA
+GUY,GYD,,,
+HTI,HTG,,,
+HND,HNL,,,
+HKG,HKD,,,
+HUN,HUF,,,
+ISL,ISK,,,
+IND,INR,,,
+IDN,IDR,,,
+IRN,IRR,,,
+IRQ,IQD,,,
+IRL,EUR,,,
+IMN,GBP,,,Livre mannoise à parité avec GBP
+ISR,ILS,,,
+ITA,EUR,,,
+JAM,JMD,,,
+JPN,JPY,,,
+JOR,JOD,,,
+KAZ,KZT,,,
+KEN,KES,,,
+KIR,AUD,,,
+PRK,KPW,,,
+KOR,KRW,,,
+KSV,EUR,,,Usage unilatéral de l'euro
+KWT,KWD,,,
+KGZ,KGS,,,
+LAO,LAK,,,
+LVA,LVL,,2013-12-31,Passage à l'euro le 2014-01-01
+LVA,EUR,2014-01-01,,
+LBN,LBP,,,
+LSO,LSL,,,Loti (rand sud-africain aussi accepté)
+LBR,LRD,,,
+LBY,LYD,,,
+LIE,CHF,,,
+LTU,LTL,,2014-12-31,Passage à l'euro le 2015-01-01
+LTU,EUR,2015-01-01,,
+LUX,EUR,,,
+MAC,MOP,,,
+MKD,MKD,,,
+MDG,MGA,,,
+MWI,MWK,,,
+MYS,MYR,,,
+MDV,MVR,,,
+MLI,XOF,,,Franc CFA UEMOA
+MLT,EUR,,,
+MHL,USD,,,
+MRT,MRO,,2017-12-31,Redénomination MRO -> MRU
+MRT,MRU,2018-01-01,,
+MUS,MUR,,,
+MEX,MXN,,,
+FSM,USD,,,
+MDA,MDL,,,
+MCO,EUR,,,
+MNG,MNT,,,
+MNE,EUR,,,Usage unilatéral de l'euro
+MAR,MAD,,,
+MOZ,MZN,,,
+MMR,MMK,,,
+NAM,NAD,,,Dollar namibien (rand sud-africain aussi accepté)
+NPL,NPR,,,
+NLD,EUR,,,
+NCL,XPF,,,Franc CFP
+NZL,NZD,,,
+NIC,NIO,,,
+NER,XOF,,,Franc CFA UEMOA
+NGA,NGN,,,
+MNP,USD,,,
+NOR,NOK,,,
+OMN,OMR,,,
+PAK,PKR,,,
+PLW,USD,,,
+PSE,ILS,,,Shekel israélien (JOD également utilisé)
+PAN,USD,,,Balboa (PAB) à parité avec USD ; billets en USD
+PNG,PGK,,,
+PRY,PYG,,,
+PER,PEN,,,
+PHL,PHP,,,
+POL,PLN,,,
+PRT,EUR,,,
+PRI,USD,,,
+QAT,QAR,,,
+ROU,RON,,,
+RUS,RUB,,,
+RWA,RWF,,,
+WSM,WST,,,
+SMR,EUR,,,
+STP,STD,,2017-12-31,Redénomination STD -> STN
+STP,STN,2018-01-01,,
+SAU,SAR,,,
+SEN,XOF,,,Franc CFA UEMOA
+SRB,RSD,,,
+SYC,SCR,,,
+SLE,SLL,,2022-06-30,Redénomination SLL -> SLE
+SLE,SLE,2022-07-01,,
+SGP,SGD,,,
+SXM,ANG,,2025-03-30,Florin des Antilles néerlandaises remplacé par le florin caribéen
+SXM,XCG,2025-03-31,,
+SVK,EUR,,,
+SVN,EUR,,,
+SLB,SBD,,,
+SOM,SOS,,,
+ZAF,ZAR,,,
+SSD,SSP,2011-07-18,,Monnaie créée à l'indépendance
+ESP,EUR,,,
+LKA,LKR,,,
+KNA,XCD,,,Dollar des Caraïbes orientales
+LCA,XCD,,,Dollar des Caraïbes orientales
+MAF,EUR,,,
+VCT,XCD,,,Dollar des Caraïbes orientales
+SDN,SDG,,,
+SUR,SRD,,,
+SWZ,SZL,,,Lilangeni (rand sud-africain aussi accepté)
+SWE,SEK,,,
+CHE,CHF,,,
+SYR,SYP,,,
+TJK,TJS,,,
+TZA,TZS,,,
+THA,THB,,,
+TLS,USD,,,
+TGO,XOF,,,Franc CFA UEMOA
+TON,TOP,,,
+TTO,TTD,,,
+TUN,TND,,,
+TUR,TRY,,,
+TKM,TMT,,,
+TCA,USD,,,
+TUV,AUD,,,
+UGA,UGX,,,
+UKR,UAH,,,
+ARE,AED,,,
+GBR,GBP,,,
+USA,USD,,,
+URY,UYU,,,
+UZB,UZS,,,
+VUT,VUV,,,
+VEN,VEF,,2018-08-19,Redénomination VEF -> VES
+VEN,VES,2018-08-20,,
+VNM,VND,,,
+VIR,USD,,,
+YEM,YER,,,
+ZMB,ZMW,,,
+ZWE,USD,,2019-06-23,Régime multidevises (USD principal) 2009-2019
+ZWE,ZWL,2019-06-24,2024-04-04,Dollar zimbabwéen
+ZWE,ZWG,2024-04-05,,Zimbabwe Gold
