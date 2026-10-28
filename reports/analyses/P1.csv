@@ -1,0 +1,3 @@
+feuille,nb_offres,nb_corridors,nb_prestataires,premiere_periode,derniere_periode,pct_cout_500usd_manquant,pct_devise_versement_manquante,pct_delai_manquant
+2011-2016,20326,122,226,2011Q1,2016Q1,0.1,0.2,0.0
+2016-2025,87574,145,226,2016Q2,2025Q3,0.3,0.1,0.0

@@ -1,0 +1,10 @@
+probleme,action_corrective,nb_lignes,pct_lignes
+devise de versement absente de la source,"déduite du produit, des notes ou des taux BIS",107784,99.89
+taux promotionnel ou marché parallèle,coût ajusté recalculé (cc2_cout_ajuste_pct),5622,5.21
+devise de la note différente de la devise versée,signalée (devise_note_differente),2331,2.16
+taux de change de l'offre suspect,signalé (cc2_lcu_fx_rate_suspect),572,0.53
+offres en double dans un même relevé,"numérotées (rang_doublon), seule la 1re est gardée en gold",571,0.53
+noms de prestataires écrits de plusieurs façons,"normalisés (firm, firm_original conservé)",158,0.15
+devise de versement impossible à déduire,"laissée vide, signalée",116,0.11
+taux interbancaire exprimé dans une autre devise,remplacé par le taux BIS de la bonne devise,87,0.08
+produit ou délai non renseigné,imputé à partir des autres colonnes,41,0.04

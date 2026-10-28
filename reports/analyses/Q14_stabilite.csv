@@ -1,0 +1,9 @@
+poids_risque,scenario,top 5,3 derniers
+20%,résident France,"Pays-Bas, Autriche, Estonie, Lituanie, Allemagne","Hongrie, Suisse, Türkiye"
+20%,expatriation,"Belgique, Croatie, Lituanie, Portugal, Estonie","Suisse, Hongrie, Türkiye"
+40%,résident France,"Pays-Bas, Autriche, Estonie, Lituanie, Allemagne","Ukraine, Hongrie, Türkiye"
+40%,expatriation,"Belgique, Croatie, Lituanie, Portugal, Estonie","Ukraine, Hongrie, Türkiye"
+60%,résident France,"Pays-Bas, Autriche, Estonie, Lituanie, Allemagne","Hongrie, Ukraine, Türkiye"
+60%,expatriation,"Belgique, Croatie, Lituanie, Estonie, Portugal","Hongrie, Ukraine, Türkiye"
+80%,résident France,"Pays-Bas, Autriche, Estonie, Lituanie, Allemagne","Hongrie, Ukraine, Türkiye"
+80%,expatriation,"Belgique, Tchéquie, Lituanie, Croatie, Estonie","Hongrie, Ukraine, Türkiye"

@@ -1,0 +1,4 @@
+type_prestataire,nb_offres,nb_prestataires,q1_cout_pct,mediane_cout_pct,q3_cout_pct,mediane_marge_change_pct,mediane_frais_pct
+autre,76,5,3.76,5.38,6.13,3.09,1.71
+banque,53,5,3.74,5.25,6.12,0.32,3.48
+operateur_transfert,2033,15,1.9,2.78,5.37,1.44,1.16

@@ -1,0 +1,62 @@
+# Data lake « gestion patrimoniale internationale » : base PostgreSQL + application conseiller.
+#
+# Démarrer la base et l'application :   docker compose up -d --build
+#   -> application : http://localhost:8501      base : localhost:5434 (data_lake / data_lake)
+# Charger (ou recharger) silver et gold dans la base :
+#                                       docker compose run --rm chargement
+# Arrêter :                             docker compose down       (les données restent dans le volume)
+# Tout effacer, données comprises :     docker compose down -v
+#
+# Identifiants de développement LOCAL uniquement (base non exposée sur Internet).
+services:
+  postgres:
+    image: postgres:16
+    container_name: data_lake_postgres
+    environment:
+      POSTGRES_DB: data_lake
+      POSTGRES_USER: data_lake
+      POSTGRES_PASSWORD: data_lake
+    ports:
+      - "5434:5432"   # 5432 et 5433 déjà utilisés par les conteneurs dbt
+    volumes:
+      - data_lake_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U data_lake -d data_lake"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+
+  application:
+    build:
+      context: .
+      dockerfile: app/Dockerfile
+    image: passerelle-application
+    container_name: passerelle_application
+    environment:
+      DATABASE_URL: postgresql+psycopg2://data_lake:data_lake@postgres:5432/data_lake
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data/bronze:/projet/data/bronze:ro   # pour l'inventaire de la page « Données et qualité »
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+
+  # Service ponctuel (non lancé par « up ») : charge data/silver et data/gold dans la base.
+  chargement:
+    image: passerelle-application
+    profiles: ["chargement"]
+    environment:
+      DATABASE_URL: postgresql+psycopg2://data_lake:data_lake@postgres:5432/data_lake
+    volumes:
+      - ./data/silver:/projet/data/silver:ro
+      - ./data/gold:/projet/data/gold:ro
+    command: ["python", "src/gold/charger_postgres.py"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  data_lake_pgdata:

@@ -1,0 +1,11 @@
+# Fichiers exclus de l'image Docker (le code utile est copié explicitement dans app/Dockerfile)
+.git
+venv
+.venv
+**/__pycache__
+data
+notebooks
+reports
+docs
+_to_delete
+*.ipynb

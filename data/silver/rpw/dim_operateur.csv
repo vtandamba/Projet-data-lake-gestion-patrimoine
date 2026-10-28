@@ -1,227 +1,312 @@
 firm,firm_type,variantes_nom,nb_offres
-1st Contact Forex,Money Transfer Operator,1st Contact Forex,17
-ABN AMRO Bank,Bank,ABN AMRO Bank,195
-AN Express,Money Transfer Operator,AN Express,12
+1st Contact Forex,Money Transfer Operator,1st Contact Forex,27
+ABN AMRO Bank,Bank,ABN AMRO Bank,355
+ACE Money Transfer,Money Transfer Operator,ACE Money Transfer | Ace Money Transfer,426
+AN Express,Money Transfer Operator,AN Express,30
+ATL Money Transfer,Money Transfer Operator,ATL Money Transfer,424
 Accredi,Money Transfer Operator,Accredi,2
 Afritrans,Money Transfer Operator,Afritrans,8
-Amaana Express,Money Transfer Operator,Amaana Express,2
-Amal Express,Money Transfer Operator,Amal Express,20
+Alior Bank S.A.,Bank,Alior Bank S.A.,10
+Alpha Transfers,Money Transfer Operator,Alpha Transfers,75
+Amaana Express,Money Transfer Operator,Amaana Express,6
+Amal Express,Money Transfer Operator,Amal Express,91
+ArcaPay,Money Transfer Operator,ArcaPay,95
 Argenta,Money Transfer Operator,Argenta,7
 Atena Money Tranfert,Money Transfer Operator,Atena Money Tranfert,2
-Atena Money Transfert,Money Transfer Operator,Atena Money Transfert,16
-Attijariwafa Bank,Bank,Attijariwafa Bank,60
-Azimo,Money Transfer Operator,Azimo | azimo,485
-BA Exchange,Money Transfer Operator,BA Exchange,4
-BBVA Dinero Express,Money Transfer Operator,BBVA Dinero Express,89
-BDO (Banco de Oro),Bank,BDO (Banco de Oro),33
+Atena Money Transfert,Money Transfer Operator,Atena Money Transfert,84
+Attijariwafa Bank,Bank,Attijariwafa Bank,438
+Azimo,Money Transfer Operator,Azimo | azimo,3681
+BA Exchange,Money Transfer Operator,BA Exchange,21
+BBVA,Money Transfer Operator,BBVA,73
+BBVA Dinero Express,Money Transfer Operator,BBVA Dinero Express,229
+BDO (Banco de Oro),Bank,BDO (Banco de Oro),67
+BFC Exchange,Money Transfer Operator,BFC Exchange,40
 BNP Paribas,Bank,BNP Paribas,189
-BPI (Bank of Philippines Island),Bank,BPI (Bank of Philippines Island),34
-Banca Intesa SanPaolo,Bank,Banca Intesa SanPaolo,277
-Banca Intesa SanPaolo via Western Union,Bank / Money Transfer Operator,Banca Intesa SanPaolo via Western Union,45
-Banca Monte dei Paschi di Siena,Bank,Banca Monte dei Paschi di Siena,280
-Banca di Credito Cooperativo,Bank,Banca di Credito Cooperativo,17
+BPI (Bank of Philippines Island),Bank,BPI (Bank of Philippines Island),36
+BRAC Saajan,Money Transfer Operator,BRAC Saajan,18
+Banca Intesa SanPaolo,Bank,Banca Intesa SanPaolo,1047
+Banca Intesa SanPaolo via Western Union,Bank / Money Transfer Operator,Banca Intesa SanPaolo via Western Union,245
+Banca Monte dei Paschi di Siena,Bank,Banca Monte dei Paschi di Siena,809
+Banca di Credito Cooperativo,Bank,Banca di Credito Cooperativo,43
 Banco Santander,Bank,Banco Santander,9
-Bangkok Bank,Bank,Bangkok Bank,2
-Bank Austria,Bank,Bank Austria,72
-Bank of China,Bank,Bank of China,61
-Bank of India,Bank,Bank of India,32
-Banque Chaabi de Maroc,Bank,Banque Chaabi de Maroc,22
-Banque Populaire,Bank,Banque Populaire,194
+Bangkok Bank,Bank,Bangkok Bank,39
+Bank Albilad,Bank,Bank Albilad,1
+Bank Austria,Bank,Bank Austria,310
+Bank Pekao,Bank,Bank Pekao,10
+Bank of China,Bank,Bank of China,96
+Bank of India,Bank,Bank of India,141
+Banque Cantonale de Genève (BCGE),Bank,Banque Cantonale de Genève (BCGE),2
+Banque Chaabi de Maroc,Bank,Banque Chaabi de Maroc,106
+Banque Populaire,Bank,Banque Populaire,327
+Banque Populaire via Wise,Bank / Money Transfer Operator,Banque Populaire via Wise,18
 Barclays,Bank,Barclays,7
 Bayba,Money Transfer Operator,Bayba,6
-Berliner Volksbank,Bank,Berliner Volksbank,109
-CSOB,Bank,CSOB,54
-Caisse D'Epargne I'lle de France,Bank,Caisse D'Epargne I'lle de France,133
-Caja Madrid,Non-Bank FI,Caja Madrid,18
-Ceska Sporitelna,Bank,Ceska Sporitelna,54
+Berliner Volksbank,Bank,Berliner Volksbank,161
+Boursorama,Bank,Boursorama,5
+CSOB,Bank,CSOB,201
+Caisse D'Epargne I'lle de France,Bank,Caisse D'Epargne I'lle de France,173
+Caisse D'Epargne I'lle de France via Wise,Bank / Money Transfer Operator,Caisse D'Epargne I'lle de France via Wise,9
+Caja Madrid,Non-Bank FI,Caja Madrid,38
+CashMinute,Money Transfer Operator,CashMinute,292
+Cassava Remit,Money Transfer Operator,Cassava Remit,144
+Ceska Sporitelna,Bank,Ceska Sporitelna,201
+Chaabi Bank,Bank / Post office,Chaabi Bank,55
 Chequepoint,Money Transfer Operator,Chequepoint,12
+China Construction Bank,Bank,China Construction Bank,2
 Choice Money Transfer,Money Transfer Operator,Choice Money Transfer,14
-Citibank,Bank,Citibank,34
+Citibank,Bank,Citibank,44
 Coinstar,Money Transfer Operator,Coinstar,241
-Commerzbank AG,Bank,Commerzbank AG,184
+Commerzbank AG,Bank,Commerzbank AG,508
 Contact D,Money Transfer Operator,Contact D,40
 Credit Agricole,Bank,Credit Agricole,128
 Credit Lyonnais,Bank,Credit Lyonnais,129
 Credit Suisse,Bank,Credit Suisse,48
 Crew Card,Money Transfer Operator,Crew Card,76
-DNB Bank,Bank,DNB Bank,18
+DNB Bank,Bank,DNB Bank,92
 DNB Bank ASA,Bank,DNB Bank ASA,2
-Dahabshiil,Money Transfer Operator,Dahabshiil,71
-Denizbank AG,Bank,Denizbank AG,20
-Deutsche Bank,Bank,Deutsche Bank,308
+Dahabshiil,Money Transfer Operator,Dahabshiil,351
+Denizbank,Bank,Denizbank,37
+Denizbank AG,Bank,Denizbank AG,92
+Deutsche Bank,Bank,Deutsche Bank,780
 Deutsche Postbank via Western Union,Bank,Deutsche Postbank via Western Union,9
-Double Crown International,Money Transfer Operator,Double Crown International,32
-Easy Exchange,Money Transfer Operator,Easy Exchange,17
-Equity Direct,Money Transfer Operator,Equity Direct,4
-Erste Bank,Bank,Erste Bank,72
-Europhil,Bank,Europhil,90
-Exact Change,Money Transfer Operator,Exact Change,29
+Double Crown International,Money Transfer Operator,Double Crown International,35
+Easy Exchange,Money Transfer Operator,Easy Exchange,36
+EcoBank Rapid Transfer,Money Transfer Operator,EcoBank Rapid Transfer,668
+Equity Direct,Money Transfer Operator,Equity Direct,73
+Erste Bank,Bank,Erste Bank,294
+Europhil,Bank,Europhil,311
+Exact Change,Money Transfer Operator,Exact Change,155
 Express Funds,Money Transfer Operator,Express Funds,21
 Express Global Finance,Money Transfer Operator,Express Global Finance,8
 Express Global Finance (EGF),Money Transfer Operator,Express Global Finance (EGF),4
-ExpressLinks UK,Money Transfer Operator,ExpressLinks UK,36
-Extrabanca,Money Transfer Operator,Extrabanca,48
-Ezremit,Money Transfer Operator,Ezremit,113
+ExpressLinks UK,Money Transfer Operator,ExpressLinks UK,110
+Extrabanca,Money Transfer Operator,Extrabanca,756
+Ezremit,Money Transfer Operator,Ezremit,202
 Fadugu,Money Transfer Operator,Fadugu,36
-FastCash,Money Transfer Operator,FastCash,32
+FastCash,Money Transfer Operator,FastCash,48
 Faster Money Transfers,Money Transfer Operator,Faster Money Transfers,3
-First African Remittances,Money Transfer Operator,First African Remittances,20
-Flouss,Money Transfer Operator,Flouss,92
+First African Remittances,Money Transfer Operator,First African Remittances,33
+First Security Islami Exchange,Money Transfer Operator,First Security Islami Exchange,34
+Flouss,Money Transfer Operator,Flouss,113
 Fokus Bank,Bank,Fokus Bank,1
 Foren Money,Money Transfer Operator,Foren Money,1
-Ghana International Bank,Bank,Ghana International Bank,15
-Global Exchange Ltd,Money Transfer Operator,Global Exchange Ltd,20
+GTL Money Transfer,Money Transfer Operator,GTL Money Transfer,8
+Ghana International Bank,Bank,Ghana International Bank,41
+Global Exchange Ltd,Money Transfer Operator,Global Exchange Ltd,132
 Global Link,Money Transfer Operator,Global Link,32
 Go,Money Transfer Operator,Go,76
 HSBC,Bank,HSBC,22
 Habib Bank,Money Transfer Operator,Habib Bank,42
-Hamburger Sparkasse,Bank,Hamburger Sparkasse,192
+Hamburger Sparkasse,Bank,Hamburger Sparkasse,243
 HypoVereinsbank,Bank,HypoVereinsbank,164
-I-transfer,Money Transfer Operator,I-transfer,5
-ICICI Bank,Bank,ICICI Bank,121
-IFIC Money Transfer,Money Transfer Operator,IFIC Money Transfer,4
+I-transfer,Money Transfer Operator,I-transfer,41
+ICICI Bank,Bank,ICICI Bank,291
+ICICI Bank Money2India,Bank,ICICI Bank Money2India,9
+IFIC Money Transfer,Money Transfer Operator,IFIC Money Transfer,54
 IME (International Money Express),Money Transfer Operator,IME (International Money Express),9
-ING Bank,Bank,ING Bank,33
-ING Bank/Postbank,Bank,ING Bank/Postbank,136
-Iftin Express,Money Transfer Operator,Iftin Express,20
-Intelexpress,Money Transfer Operator,Intelexpress,8
-Isbank,Bank,Isbank,30
+ING Bank,Bank,ING Bank,38
+ING Bank/Postbank,Bank,ING Bank/Postbank,291
+Iftin Express,Money Transfer Operator,Iftin Express,91
+Intelexpress,Money Transfer Operator,Intelexpress,36
+Isbank,Bank,Isbank,88
 J-Fin,Money Transfer Operator,J-Fin,3
-Jamaica National,Money Transfer Operator / Building Society,Jamaica National,17
+JN Money,Bank,JN Money,54
+Jamaica National,Money Transfer Operator / Building Society,Jamaica National,21
 Jambo Global,Money Transfer Operator,Jambo Global,5
-Juba Express,Money Transfer Operator,Juba Express,2
-Kaah Express,Money Transfer Operator,Kaah Express,7
-Kanson Services,Money Transfer Operator,Kanson Services,18
-Kantipur Services,Money Transfer Operator,Kantipur Services,27
-Kapook,Money Transfer Operator,Kapook,1
+Janata Exchange Company,Money Transfer Operator,Janata Exchange Company,20
+Juba Express,Money Transfer Operator,Juba Express,10
+Kaah Express,Money Transfer Operator,Kaah Express,14
+Kanson Services,Money Transfer Operator,Kanson Services,53
+Kantipur Services,Money Transfer Operator,Kantipur Services,33
+Kapook,Money Transfer Operator,Kapook,38
+Kapruka,Money Transfer Operator,Kapruka,1
 Komercijalna Banka,Bank,Komercijalna Banka,1
 Komercni Banka,Bank,Komercni Banka,21
+Kookmin Bank,Bank,Kookmin Bank,1
+Korea Post Office,Post office,Korea Post Office,1
+Kotak Click2Remit,Bank,Kotak Click2Remit,49
 Kushiara,Bank,Kushiara,14
 LCC,Money Transfer Operator,LCC,139
-La Caixa,Bank,La Caixa,37
-La Poste,Money Transfer Operator / Post office,La Poste,301
-La Poste via Western Union,Money Transfer Operator / Post office,La Poste via Western Union,232
-Lebara,Money Transfer Operator,Lebara,200
+La Banque Postale,Bank,La Banque Postale,162
+La Banque Postale via Western Union,Bank / Money Transfer Operator,La Banque Postale via Western Union,268
+La Caixa,Bank,La Caixa,127
+La Poste,Money Transfer Operator / Post office,La Poste,717
+La Poste via Ria,Money Transfer Operator / Post office,La Poste via Ria,67
+La Poste via Western Union,Money Transfer Operator / Post office,La Poste via Western Union,657
+Lebara,Money Transfer Operator,Lebara,252
+Lebara Money,Money Transfer Operator,Lebara Money,48
+Lyca,Money Transfer Operator,Lyca,17
+Lyca Remit,Money Transfer Operator,Lyca Remit,264
 M-Pesa,Mobile Operator,M-Pesa,1
-MB Transfers,Money Transfer Operator,MB Transfers,8
-Maccorp Exact Change,Money Transfer Operator,Maccorp Exact Change,112
+MB Transfers,Money Transfer Operator,MB Transfers,10
+Maccorp Exact Change,Money Transfer Operator,Maccorp Exact Change,310
 Malam Connection,Money Transfer Operator,Malam Connection,3
 Master Envios Unidos,Money Transfer Operator,Master Envios Unidos,7
 MasterLink,Money Transfer Operator,MasterLink,2
-Metro Remittance,Money Transfer Operator,Metro Remittance,73
+Metro Remittance,Money Transfer Operator,Metro Remittance,114
+Migros Bank,Bank,Migros Bank,2
 MobiCash,Money Transfer Operator,MobiCash,13
 Mobile Union,Money Transfer Operator,Mobile Union,3
 Mondial Bony Service,Money Transfer Operator,Mondial Bony Service,22
-Money Exchange,Money Transfer Operator,Money Exchange,115
-Money Express,Money Transfer Operator,Money Express,37
+Money Exchange,Money Transfer Operator,Money Exchange,455
+Money Exchange Italia,Money Transfer Operator,Money Exchange Italia,38
+Money Express,Money Transfer Operator,Money Express,56
 Money Remittance Worldwide,Money Transfer Operator,Money Remittance Worldwide,30
 Money Share Card,Money Transfer Operator,Money Share Card,2
 Money X Press,Money Transfer Operator,Money X Press,76
-MoneyGram,Money Transfer Operator,MoneyGram,2313
+MoneyGram,Money Transfer Operator,MoneyGram,15414
+MoneySwift,Money Transfer Operator,MoneySwift,4
 MoneyTT,Money Transfer Operator,MoneyTT,6
-MoneyTrans,Money Transfer Operator / Post office,MoneyTrans,155
+MoneyTrans,Money Transfer Operator / Post office,MoneyTrans,504
 Moneybookers,Money Transfer Operator,Moneybookers,220
-Moneyglobe,Money Transfer Operator,Moneyglobe,64
-Moneyline UK,Money Transfer Operator,Moneyline UK,21
-Moneypolo,Money Transfer Operator,Moneypolo,28
-Mukuru,Money Transfer Operator,Mukuru,60
-Multi Money Transfer,Money Transfer Operator,Multi Money Transfer,80
+Moneyglobe,Money Transfer Operator,Moneyglobe,160
+Moneyline UK,Money Transfer Operator,Moneyline UK,43
+Moneypolo,Money Transfer Operator,Moneypolo,46
+Monisnap,Money Transfer Operator,Monisnap,131
+Mukuru,Money Transfer Operator,Mukuru,151
+Multi Money Transfer,Money Transfer Operator,Multi Money Transfer,158
 Muncha Money Transfer Serivces,Money Transfer Operator,Muncha Money Transfer Serivces,1
 Mustaqbal,Money Transfer Operator,Mustaqbal,1
-Mustaqbal Express,Money Transfer Operator,Mustaqbal Express,17
+Mustaqbal Express,Money Transfer Operator,Mustaqbal Express,21
 NCBJ,Bank,NCBJ,3
-NEC,Money Transfer Operator,NEC,65
+NEC,Money Transfer Operator,NEC,156
 NatWest,Bank,NatWest,1
+National Exchange Company,Money Transfer Operator,National Exchange Company,161
 NetFox Ltd,Bank,NetFox Ltd,26
 Netfox,Money Transfer Operator,Netfox,1
-Noble Money,Bank,Noble Money,17
-Nordea Bank,Bank,Nordea Bank,59
+Noble Money,Bank,Noble Money,25
+Nordea Bank,Bank,Nordea Bank,389
 Now Transfer,Money Transfer Operator,Now Transfer,14
-Opal Transfer,Money Transfer Operator,Opal Transfer,67
-Orbit Remit,Money Transfer Operator,Orbit Remit,60
+Opal Transfer,Money Transfer Operator,Opal Transfer,308
+Orange Money,Mobile Operator,Orange Money,75
+Orbit Remit,Money Transfer Operator,Orbit Remit,210
 Oyak Anker Bank,Money Transfer Operator,Oyak Anker Bank,27
 PNB (Philippine National Bank),Bank,PNB (Philippine National Bank),2
-PNB (Philippines National Bank),Bank,PNB (Philippines National Bank),70
-Parwaz Money Exchange,Money Transfer Operator,Parwaz Money Exchange,2
-PayAfrique.com,Money Transfer Operator,PayAfrique.com,8
+PNB (Philippines National Bank),Bank,PNB (Philippines National Bank),231
+PTT,Post office,PTT,13
+PTT-UPT,Money Transfer Operator,PTT-UPT,37
+PTT-Western Union,Money Transfer Operator,PTT-Western Union,8
+Paco Money Transfer,Money Transfer Operator,Paco Money Transfer,3
+Parwaz Money Exchange,Money Transfer Operator,Parwaz Money Exchange,20
+Pay iZi!,Money Transfer Operator,Pay iZi!,48
+PayAfrique.com,Money Transfer Operator,PayAfrique.com,24
+PaySii,Money Transfer Operator,PaySii,2
+PayTop,Money Transfer Operator,PayTop,140
+Paysend,Money Transfer Operator,Paysend,292
 Philippine National Bank,Bank,Philippine National Bank,1
-Postbank,Post office,Postbank,414
-Postbank via Western Union,Bank / Money Transfer Operator,Postbank via Western Union,220
+Philippines Remittances Ltd,Money Transfer Operator,Philippines Remittances Ltd,4
+Post Office UK via Western Union,Money Transfer Operator / Post office,Post Office UK via Western Union,30
+Postbank,Post office,Postbank,1388
+Postbank via Western Union,Bank / Money Transfer Operator,Postbank via Western Union,690
 Postbanken,Money Transfer Operator / Post office,Postbanken,13
 Poste Italiane,Post office,Poste Italiane,11
-Poste Italiane via Eurogiro,Post office,Poste Italiane via Eurogiro,69
-Poste Italiane via MoneyGram,Money Transfer Operator,Poste Italiane via MoneyGram,221
-Punjabi National Bank,Bank,Punjabi National Bank,1
+Poste Italiane via Eurogiro,Post office,Poste Italiane via Eurogiro,493
+Poste Italiane via MoneyGram,Money Transfer Operator,Poste Italiane via MoneyGram,922
+Poste Italiane via Western Union,Money Transfer Operator / Post office,Poste Italiane via Western Union,483
+Punjab National Bank,Bank,Punjab National Bank,53
+Punjabi National Bank,Bank,Punjabi National Bank,20
 Qaran Express,Money Transfer Operator,Qaran Express,3
 RCBC Telemoney Europe,Bank,RCBC Telemoney Europe,34
-Rabobank,Money Transfer Operator,Rabobank,98
+Rabobank,Money Transfer Operator,Rabobank,370
 Raiffeisen Bank,Bank,Raiffeisen Bank,13
-Remit2India,Money Transfer Operator,Remit2India,49
-RemitGuru,Money Transfer Operator,RemitGuru,14
-Ria,Money Transfer Operator,Ria,1197
-SEB,Bank,SEB,5
-Saajan Worldwide Money Transfer,Money Transfer Operator,Saajan Worldwide Money Transfer,31
+Raiffeisenbank,Bank,Raiffeisenbank,64
+Real Money Transfer,Money Transfer Operator,Real Money Transfer,10
+Real Transfer,Money Transfer Operator,Real Transfer,34
+Remit2India,Money Transfer Operator,Remit2India,78
+RemitGuru,Money Transfer Operator,RemitGuru,71
+RemitMoney,Bank,RemitMoney,30
+Remitly,Money Transfer Operator,Remitly,6603
+Revolut,Bank,Revolut,3
+Rewire,Money Transfer Operator,Rewire,254
+Ria,Money Transfer Operator,Ria,7752
+Rocket Remit,Money Transfer Operator,Rocket Remit,1
+SEB,Bank,SEB,103
+Saajan Worldwide Money Transfer,Money Transfer Operator,Saajan Worldwide Money Transfer,55
 Safe Money Transfer,Money Transfer Operator,Safe Money Transfer,28
 Safe Money Transfer Spain,Money Transfer Operator,Safe Money Transfer Spain,1
 Safe Transfer,Money Transfer Operator,Safe Transfer,6
 Sahamiye,Money Transfer Operator,Sahamiye,2
-Samba Money Transfers,Money Transfer Operator,Samba Money Transfers,14
-Sami Swoi,Money Transfer Operator,Sami Swoi,56
-Sangerwal Money Transfer,Money Transfer Operator,Sangerwal Money Transfer,2
-Santander Envíos,Money Transfer Operator,Santander Envíos,146
-Sigue Money Transfers,Money Transfer Operator,Sigue Money Transfers,470
-Skrill,Money Transfer Operator,Skrill,207
-Small World,Money Transfer Operator,Small World,48
-Small World FS-Choice,Money Transfer Operator,Small World FS-Choice,57
+Samba Money Transfers,Money Transfer Operator,Samba Money Transfers,22
+Sami Swoi,Money Transfer Operator,Sami Swoi,150
+Sangerwal Money Transfer,Money Transfer Operator,Sangerwal Money Transfer,22
+Santander Envios,Money Transfer Operator,Santander Envios,17
+Santander Envíos,Money Transfer Operator,Santander Envíos,192
+Sendwave,Money Transfer Operator,Sendwave,225
+Sigue Money Transfers,Money Transfer Operator,Sigue Money Transfers,820
+Skrill,Money Transfer Operator,Skrill,832
+Small World,Money Transfer Operator,Small World,6640
+Small World FS-Choice,Money Transfer Operator,Small World FS-Choice,61
 Small World FS-Express Funds,Money Transfer Operator,Small World FS-Express Funds,14
 Small World FS-Global Link,Money Transfer Operator,Small World FS-Global Link,54
-Small World FS-LCC,Money Transfer Operator,Small World FS-LCC,224
-Small World FS-SwissTransfers,Money Transfer Operator,Small World FS-SwissTransfers,13
-Smith & Smith,Money Transfer Operator,Smith & Smith,17
-Societe Generale,Bank,Societe Generale,277
-Sonali Bank,Bank,Sonali Bank,28
-Sparkasse KolnBonn,Bank,Sparkasse KolnBonn,177
-Speedfast,Money Transfer Operator,Speedfast,11
-Stadtsparkasse Munchen,Bank,Stadtsparkasse Munchen,92
-State Bank of India,Bank,State Bank of India,62
-Suri-Change,Money Transfer Operator,Suri-Change,62
+Small World FS-LCC,Money Transfer Operator,Small World FS-LCC,228
+Small World FS-SwissTransfers,Money Transfer Operator,Small World FS-SwissTransfers,16
+Smith & Smith,Money Transfer Operator,Smith & Smith,78
+Smith & Smith via MoneyGram,Money Transfer Operator,Smith & Smith via MoneyGram,10
+Societe Generale,Bank,Societe Generale,456
+Softeller,Money Transfer Operator,Softeller,19
+Sonali Bank,Bank,Sonali Bank,91
+Sparkasse KolnBonn,Bank,Sparkasse KolnBonn,223
+Speedfast,Money Transfer Operator,Speedfast,50
+Stadtsparkasse Munchen,Bank,Stadtsparkasse Munchen,141
+State Bank of India,Bank,State Bank of India,184
+Suri-Change,Money Transfer Operator,Suri-Change,176
 SwiftCash,Money Transfer Operator,SwiftCash,17
-Swiss Post,Money Transfer Operator / Post office,Swiss Post,15
+Swiss Post,Money Transfer Operator / Post office,Swiss Post,172
 SwissTransfers,Money Transfer Operator,SwissTransfers,7
-Tawakal Express,Money Transfer Operator,Tawakal Express,18
-Telegiros,Money Transfer Operator,Telegiros,173
-Tonio,Money Transfer Operator,Tonio,25
+Taaj Money Transfer,Money Transfer Operator,Taaj Money Transfer,26
+TalkRemit,Money Transfer Operator,TalkRemit,6
+TapTap Send,Money Transfer Operator,TapTap Send | Taptap Send,203
+Tawakal Express,Money Transfer Operator,Tawakal Express,51
+Telegiros,Money Transfer Operator,Telegiros,333
+Tempo Money Transfer,Money Transfer Operator,Tempo Money Transfer,203
+Tonio,Money Transfer Operator,Tonio,73
 Trans Fast,Money Transfer Operator,Trans Fast,6
-Trans-Fast,Money Transfer Operator,Trans-Fast,93
-Trans-fast (Imporium Brazil),Money Transfer Operator,Trans-fast (Imporium Brazil),20
+Trans-Fast,Money Transfer Operator,Trans-Fast,206
+Trans-fast (Imporium Brazil),Money Transfer Operator,Trans-fast (Imporium Brazil),55
 Transfast,Money Transfer Operator,Transfast,5
+Transfer Galaxy,Money Transfer Operator,Transfer Galaxy,434
 Transfer Rapid,Money Transfer Operator,Transfer Rapid,1
-TransferGo,Money Transfer Operator,TransferGo,16
-Transferwise,Money Transfer Operator,Transferwise,152
-Tranzfers.com,Money Transfer Operator,Tranzfers.com,24
-UBL,Bank,UBL,1
+TransferGo,Money Transfer Operator,TransferGo,610
+Transferwise,Money Transfer Operator,Transferwise,763
+Tranzfers.com,Money Transfer Operator,Tranzfers.com,41
+Turkey IS Bank,Bank,Turkey IS Bank,70
+Turkey IS Bank via Western Union,Bank / Money Transfer Operator,Turkey IS Bank via Western Union,12
+UBL,Bank,UBL,54
 UNIStream (UK),Money Transfer Operator,UNIStream (UK),17
-Unicredit Banca,Bank,Unicredit Banca,279
-Unicredit Banca via Western Union,Bank / Money Transfer Operator,Unicredit Banca via Western Union,6
-Unistream,Money Transfer Operator,Unistream,38
-Unity Link,Money Transfer Operator,Unity Link,39
-Unity Monetary Services BV,Money Transfer Operator,Unity Monetary Services BV,17
-Universal Money Transfer Gmbh,Money Transfer Operator,Universal Money Transfer Gmbh,22
+UPT,Money Transfer Operator,UPT,35
+Uber Remit,Money Transfer Operator,Uber Remit,27
+Unicredit Banca,Bank,Unicredit Banca,817
+Unicredit Banca via Western Union,Bank / Money Transfer Operator,Unicredit Banca via Western Union,29
+Unistream,Money Transfer Operator,Unistream,77
+Unity Link,Money Transfer Operator,Unity Link,99
+Unity Monetary Services BV,Money Transfer Operator,Unity Monetary Services BV,171
+Universal Money Transfer Gmbh,Money Transfer Operator,Universal Money Transfer Gmbh,42
 Universal de Envios,Money Transfer Operator,Universal de Envios,32
-Vakifbank International AG,Bank,Vakifbank International AG,14
-Valutrans,Money Transfer Operator,Valutrans,29
+Vakifbank,Bank,Vakifbank,1
+Vakifbank International AG,Bank,Vakifbank International AG,25
+Vakıfbank International AG,Money Transfer Operator,Vakıfbank International AG,25
+Valutrans,Money Transfer Operator,Valutrans,127
 Victoria Mutual,Money Transfer Operator,Victoria Mutual,20
-Vietinbank,Bank,Vietinbank,2
+Vietinbank,Bank,Vietinbank,50
 Voicecash,Money Transfer Operator,Voicecash,20
 Volksbank Rhein-Ruhr,Bank / Money Transfer Operator,Volksbank Rhein-Ruhr,16
 Volksbanken,Bank,Volksbanken,10
-Western Union,Money Transfer Operator,Western Union,3568
-WorldRemit,Money Transfer Operator,WorldRemit,345
+Wave,Money Transfer Operator,Wave,66
+Western Union,Money Transfer Operator,Western Union,19961
+Westpac,Bank,Westpac,1
+Wise,Money Transfer Operator,Wise,2222
+WorldRemit,Money Transfer Operator,WorldRemit,7120
 X Press Money,Money Transfer Operator,X Press Money,37
-Xendpay,Money Transfer Operator,Xendpay,90
-Xpress Money,Money Transfer Operator,Xpress Money,148
-YaYeh Instant Services,Money Transfer Operator,YaYeh Instant Services,10
+Xendpay,Money Transfer Operator,Xendpay,506
+Xoom,Money Transfer Operator,Xoom,77
+Xpress Money,Money Transfer Operator,Xpress Money,720
+YaYeh Instant Services,Money Transfer Operator,YaYeh Instant Services,50
+Yapi ve Kredi Bankasi,Bank,Yapi ve Kredi Bankasi,29
+Yapı ve Kredi Bankası,Bank,Yapı ve Kredi Bankası,8
+Ziraat Bank,Bank,Ziraat Bank,37
 Ziraat Bank International,Money Transfer Operator,Ziraat Bank International,29
+Zolotaya Korona,Money Transfer Operator,Zolotaya Korona,3
 iKobo,Money Transfer Operator,iKobo,39
-iRemit,Money Transfer Operator,iRemit,51
+iRemit,Money Transfer Operator,iRemit,178
+money2India (ICICI Bank),Bank / Money Transfer Operator,money2India (ICICI Bank),17
 mtnmmo.com,Money Transfer Operator,mtnmmo.com,7

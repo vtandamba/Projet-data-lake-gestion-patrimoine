@@ -1,0 +1,31 @@
+6532 lignes : 23 pays x 284 mois (2003-01 -> 2026-08)
+
+Taux directeurs au 2026-08 :
+iso3  taux_directeur_pct  ecart_vs_bce_pts     source_taux_directeur
+ TUR               37.00             34.75 banque centrale nationale
+ ROU                6.50              4.25 banque centrale nationale
+ HUN                5.50              3.25 banque centrale nationale
+ NOR                4.25              2.00 banque centrale nationale
+ CZE                3.75              1.50 banque centrale nationale
+ POL                3.75              1.50 banque centrale nationale
+ GBR                3.75              1.50 banque centrale nationale
+ LTU                2.25              0.00           BCE (zone euro)
+ BGR                2.25              0.00           BCE (zone euro)
+ BEL                2.25              0.00           BCE (zone euro)
+ AUT                2.25              0.00           BCE (zone euro)
+ DEU                2.25              0.00           BCE (zone euro)
+ EST                2.25              0.00           BCE (zone euro)
+ ESP                2.25              0.00           BCE (zone euro)
+ LVA                2.25              0.00           BCE (zone euro)
+ ITA                2.25              0.00           BCE (zone euro)
+ HRV                2.25              0.00           BCE (zone euro)
+ FRA                2.25              0.00           BCE (zone euro)
+ PRT                2.25              0.00           BCE (zone euro)
+ NLD                2.25              0.00           BCE (zone euro)
+ SWE                1.75             -0.50 banque centrale nationale
+ CHE                0.00             -2.25 banque centrale nationale
+ UKR                 NaN               NaN                    absent
+
+Pays sans inflation mensuelle BIS : ['UKR'] (inflation annuelle : table annuelle)
+
+[OK] Gold enregistré : data/gold/indicateurs_mensuels.csv  (6532 lignes, 9 colonnes)

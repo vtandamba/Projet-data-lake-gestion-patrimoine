@@ -1,0 +1,37 @@
+Offres entre pays du périmètre : 19476 (24 corridors, 54 trimestres, 2011_1Q -> 2025_3Q)
+Envoyées en EUR depuis la zone euro : 12410
+
+Offres par type de prestataire :
+type_prestataire
+operateur_transfert    16115
+banque                  2469
+autre                    892
+
+Corridors (offres sur la dernière période) :
+corridor
+DEUROU    51
+AUTTUR    37
+ITAROU    31
+NORPOL    31
+DEUTUR    30
+GBRPOL    30
+ITAUKR    25
+DEUBGR    25
+GBRLTU    25
+GBRROU    24
+NLDTUR    23
+GBRBGR    22
+POLUKR    22
+BELTUR    21
+AUTHRV    20
+DEUHRV    20
+DEUUKR    19
+ESPROU    19
+AUTHUN    19
+DEUHUN    18
+CZEUKR    15
+CHEHUN    13
+ESPBGR    13
+TURBGR    11
+
+[OK] Gold enregistré : data/gold/offres_rpw.csv  (19476 lignes, 45 colonnes)

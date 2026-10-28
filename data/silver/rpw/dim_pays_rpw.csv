@@ -1,76 +1,81 @@
 iso3,nom_pays,region,income,lending,g8g20,dans_perimetre
 AFG,Afghanistan,South Asia,Low income,IDA,Non membre,False
 ALB,Albania,Europe & Central Asia,Upper middle income,IBRD,Non membre,False
-AUT,Austria,Non applicable,High income: OECD,Non applicable,Non membre,True
-BEL,Belgium,Non applicable,High income: OECD,Non applicable,Non membre,True
-BGD,Bangladesh,South Asia,Low income,IDA,Non membre,False
+AUT,Austria,Non applicable,High income,Non applicable,Non membre,True
+BEL,Belgium,Non applicable,High income,Non applicable,Non membre,True
+BGD,Bangladesh,South Asia,Lower middle income,IDA,Non membre,False
 BGR,Bulgaria,Europe & Central Asia,Upper middle income,IBRD,Non membre,True
 BIH,Bosnia and Herzegovina,Europe & Central Asia,Upper middle income,IBRD,Non membre,False
-BOL,Bolivia,Latin America & Caribbean,Lower middle income,Blend,Non membre,False
+BOL,Bolivia,Latin America & Caribbean,Lower middle income,IBRD,Non membre,False
 BRA,Brazil,Latin America & Caribbean,Upper middle income,IBRD,G20,False
-CHE,Switzerland,Non applicable,High income: OECD,Non applicable,Non membre,True
+CHE,Switzerland,Non applicable,High income,Non applicable,Non membre,True
 CHN,China,East Asia & Pacific,Upper middle income,IBRD,G20,False
 CIV,Côte d'Ivoire,Sub-Saharan Africa,Lower middle income,IDA,Non membre,False
 CMR,Cameroon,Sub-Saharan Africa,Lower middle income,Blend,Non membre,False
-COD,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,Blend,Non membre,False
+COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,IDA,Non membre,False
 COL,Colombia,Latin America & Caribbean,Upper middle income,IBRD,Non membre,False
-CZE,Czech Republic,Non applicable,High income: OECD,Non applicable,Non membre,True
-DEU,Germany,Non applicable,High income: OECD,Non applicable,G8/G20,True
+COM,Comoros,Sub-Saharan Africa,Lower middle income,IDA,Non membre,False
+CPV,Cabo Verde,Sub-Saharan Africa,Lower middle income,Blend,Non membre,False
+CZE,Czech Republic,Non applicable,High income,Non applicable,Non membre,True
+DEU,Germany,Non applicable,High income,Non applicable,G8/G20,True
 DOM,Dominican Republic,Latin America & Caribbean,Upper middle income,IBRD,Non membre,False
 DZA,Algeria,Middle East & North Africa,Upper middle income,IBRD,Non membre,False
 ECU,Ecuador,Latin America & Caribbean,Upper middle income,IBRD,Non membre,False
 EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,IBRD,Non membre,False
 ERI,Eritrea,Sub-Saharan Africa,Low income,IDA,Non membre,False
-ESP,Spain,Non applicable,High income: OECD,Non applicable,Non membre,True
+ESP,Spain,Non applicable,High income,Non applicable,Non membre,True
 ETH,Ethiopia,Sub-Saharan Africa,Low income,IDA,Non membre,False
-FRA,France,Non applicable,High income: OECD,Non applicable,G8/G20,True
-GBR,United Kingdom,Non applicable,High income: OECD,Non applicable,G8/G20,True
+FRA,France,Non applicable,High income,Non applicable,G8/G20,True
+GBR,United Kingdom,Non applicable,High income,Non applicable,G8/G20,True
 GHA,Ghana,Sub-Saharan Africa,Lower middle income,IDA,Non membre,False
 GMB,"Gambia, The",Sub-Saharan Africa,Low income,IDA,Non membre,False
 HND,Honduras,Latin America & Caribbean,Lower middle income,IDA,Non membre,False
-HRV,Croatia,Non applicable,High income: nonOECD,IBRD,Non membre,True
+HRV,Croatia,Non applicable,High income,IBRD,Non membre,True
 HTI,Haiti,Latin America & Caribbean,Low income,IDA,Non membre,False
-HUN,Hungary,Europe & Central Asia,Upper middle income,Non applicable,Non membre,True
+HUN,Hungary,Europe & Central Asia,High income,Non applicable,Non membre,True
 IDN,Indonesia,East Asia & Pacific,Lower middle income,IBRD,G20,False
 IND,India,South Asia,Lower middle income,IBRD,G20,False
-ITA,Italy,Non applicable,High income: OECD,Non applicable,G8/G20,True
+ITA,Italy,Non applicable,High income,Non applicable,G8/G20,True
 JAM,Jamaica,Latin America & Caribbean,Upper middle income,IBRD,Non membre,False
-KEN,Kenya,Sub-Saharan Africa,Low income,IDA,Non membre,False
+KEN,Kenya,Sub-Saharan Africa,Lower middle income,Blend,Non membre,False
 KGZ,Kyrgyz Republic,Europe & Central Asia,Lower middle income,IDA,Non membre,False
-KSV,Kosovo,Europe & Central Asia,Lower middle income,IDA,Non membre,False
+KSV,Kosovo,Europe & Central Asia,Upper middle income,IDA,Non membre,False
 LBN,Lebanon,Middle East & North Africa,Upper middle income,IBRD,Non membre,False
-LKA,Sri Lanka,South Asia,Lower middle income,Blend,Non membre,False
-LTU,Lithuania,Non applicable,High income: nonOECD,Non applicable,Non membre,True
+LKA,Sri Lanka,South Asia,Lower middle income,IBRD,Non membre,False
+LTU,Lithuania,Non applicable,High income,Non applicable,Non membre,True
 MAR,Morocco,Middle East & North Africa,Lower middle income,IBRD,Non membre,False
 MDA,Moldova,Europe & Central Asia,Lower middle income,Blend,Non membre,False
 MDG,Madagascar,Sub-Saharan Africa,Low income,IDA,Non membre,False
 MKD,"Macedonia, FYR",Europe & Central Asia,Upper middle income,IBRD,Non membre,False
 MLI,Mali,Sub-Saharan Africa,Low income,IDA,Non membre,False
+MOZ,Mozambique,Sub-Saharan Africa,Low income,IDA,Non membre,False
 NGA,Nigeria,Sub-Saharan Africa,Lower middle income,Blend,Non membre,False
-NLD,Netherlands,Non applicable,High income: OECD,Non applicable,Non membre,True
-NOR,Norway,Non applicable,High income: OECD,Non applicable,Non membre,True
-NPL,Nepal,South Asia,Low income,IDA,Non membre,False
+NLD,Netherlands,Non applicable,High income,Non applicable,Non membre,True
+NOR,Norway,Non applicable,High income,Non applicable,Non membre,True
+NPL,Nepal,South Asia,Lower middle income,IDA,Non membre,False
 PAK,Pakistan,South Asia,Lower middle income,Blend,Non membre,False
 PER,Peru,Latin America & Caribbean,Upper middle income,IBRD,Non membre,False
 PHL,Philippines,East Asia & Pacific,Lower middle income,IBRD,Non membre,False
-POL,Poland,Non applicable,High income: OECD,IBRD,Non membre,True
+POL,Poland,Non applicable,High income,IBRD,Non membre,True
+PRT,Portugal,Non applicable,High income,Non applicable,Non membre,True
 ROU,Romania,Europe & Central Asia,Upper middle income,IBRD,Non membre,True
 RWA,Rwanda,Sub-Saharan Africa,Low income,IDA,Non membre,False
 SEN,Senegal,Sub-Saharan Africa,Lower middle income,IDA,Non membre,False
 SLE,Sierra Leone,Sub-Saharan Africa,Low income,IDA,Non membre,False
 SOM,Somalia,Sub-Saharan Africa,Low income,IDA,Non membre,False
 SRB,Serbia,Europe & Central Asia,Upper middle income,IBRD,Non membre,False
+SSD,South Sudan,Sub-Saharan Africa,Low income,IDA,Non membre,False
 SUR,Suriname,Latin America & Caribbean,Upper middle income,IBRD,Non membre,False
-SWE,Sweden,Non applicable,High income: OECD,Non applicable,Non membre,True
+SWE,Sweden,Non applicable,High income,Non applicable,Non membre,True
 TGO,Togo,Sub-Saharan Africa,Low income,IDA,Non membre,False
 THA,Thailand,East Asia & Pacific,Upper middle income,IBRD,Non membre,False
 TJK,Tajikistan,Europe & Central Asia,Low income,IDA,Non membre,False
-TUN,Tunisia,Middle East & North Africa,Upper middle income,IBRD,Non membre,False
+TUN,Tunisia,Middle East & North Africa,Lower middle income,IBRD,Non membre,False
 TUR,Turkey,Europe & Central Asia,Upper middle income,IBRD,G20,True
-TZA,Tanzania,Sub-Saharan Africa,Low income,IDA,Non membre,False
+TZA,Tanzania,Sub-Saharan Africa,Lower middle income,IDA,Non membre,False
 UGA,Uganda,Sub-Saharan Africa,Low income,IDA,Non membre,False
 UKR,Ukraine,Europe & Central Asia,Lower middle income,IBRD,Non membre,True
-VNM,Vietnam,East Asia & Pacific,Lower middle income,Blend,Non membre,False
+VNM,Vietnam,East Asia & Pacific,Lower middle income,IBRD,Non membre,False
 ZAF,South Africa,Sub-Saharan Africa,Upper middle income,IBRD,G20,False
 ZMB,Zambia,Sub-Saharan Africa,Lower middle income,IDA,Non membre,False
-ZWE,Zimbabwe,Sub-Saharan Africa,Low income,Blend,Non membre,False
+ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,Blend,Non membre,False

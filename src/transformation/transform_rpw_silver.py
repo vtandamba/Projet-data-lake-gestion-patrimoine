@@ -1,8 +1,21 @@
 """
-Source 1 (feuille 1) - Remittance Prices Worldwide (RPW)
+Source 1 - Remittance Prices Worldwide (RPW), offres de transfert 2011 -> 2025
 Transformation bronze -> silver : toutes les propositions correctives du dictionnaire.
 
-Entrées : data/bronze/rpw_f1S1/Source1_f1.csv
+Le classeur RPW a deux feuilles d'offres (changement de méthode au 2e trimestre 2016),
+extraites en bronze par src/ingestion/ingest_rpw_bronze.py. Elles sont harmonisées en
+UNE table (colonne `feuille` pour savoir d'où vient chaque ligne) :
+
+  feuille 2011-2016        feuille 2016-2025              colonne silver
+  product                  payment instrument      ->    product / payment_instrument
+  sending location         access point            ->    sending_location (canal d'envoi)
+  note1                    Standard Note           ->    standard_note
+  coverage                 receiving network cov.  ->    coverage / receiving_network_coverage
+  pick-up method           pickup method           ->    pickup_method
+  -                        pickup location         ->    pickup_location
+
+Entrées : data/bronze/rpw_f1S1/rpw_q1_2011_2016.csv  (feuille 'Dataset (up to Q1 2016)')
+          data/bronze/rpw_f1S1/rpw_q2_2016_2025.csv  (feuille 'Dataset (from Q2 2016)')
           data/silver/bis/bis_xru.csv   (taux BIS, produit par transform_bis_xru_silver.py)
 Sorties : data/silver/rpw/rpw.csv             (table de faits : 1 ligne = 1 offre)
           data/silver/rpw/dim_pays_rpw.csv    (attributs pays sortis de la table de faits)
@@ -28,7 +41,13 @@ import pandas as pd
 sys.stdout.reconfigure(encoding="utf-8")
 
 RACINE = Path(__file__).resolve().parents[2]
-FICHIER_BRONZE = RACINE / "data" / "bronze" / "rpw_f1S1" / "Source1_f1.csv"
+BRONZE_Q1 = RACINE / "data" / "bronze" / "rpw_f1S1" / "rpw_q1_2011_2016.csv"
+BRONZE_Q2 = RACINE / "data" / "bronze" / "rpw_f1S1" / "rpw_q2_2016_2025.csv"
+FEUILLE_Q1 = "2011-2016"
+FEUILLE_Q2 = "2016-2025"
+# feuille 2016-2025 : noms de colonnes ramenés à ceux de la feuille 2011-2016
+RENOMMAGE_Q2 = {"access point": "sending location", "Standard Note": "note1",
+                "pickup method": "pick-up method"}
 FICHIER_XRU = RACINE / "data" / "silver" / "bis" / "bis_xru.csv"
 DOSSIER_SILVER = RACINE / "data" / "silver" / "rpw"
 
@@ -69,12 +88,18 @@ rapport = []   # valeurs non reconnues, affichées à la fin
 # A. STRUCTURE
 # =============================================================================
 def lire_bronze() -> pd.DataFrame:
-    for encodage in ("utf-8", "latin-1"):
-        try:
-            return pd.read_csv(FICHIER_BRONZE, dtype=str, encoding=encodage)
-        except UnicodeDecodeError:
-            continue
-    raise ValueError(f"Impossible de lire {FICHIER_BRONZE}")
+    """Lit les deux feuilles et les empile avec des noms de colonnes communs."""
+    for fichier in (BRONZE_Q1, BRONZE_Q2):
+        if not fichier.exists():
+            raise SystemExit(f"[X] {fichier} introuvable : lancer d'abord "
+                             "src/ingestion/ingest_rpw_bronze.py")
+    q1 = pd.read_csv(BRONZE_Q1, dtype=str, encoding="utf-8")
+    q2 = pd.read_csv(BRONZE_Q2, dtype=str, encoding="utf-8")
+    q2 = q2.drop(columns=[c for c in q2.columns if c.startswith("Unnamed")])  # colonnes vides
+    q2 = q2.rename(columns=RENOMMAGE_Q2)
+    q1["feuille"], q2["feuille"] = FEUILLE_Q1, FEUILLE_Q2
+    print(f"Bronze lu : feuille {FEUILLE_Q1} {len(q1)} lignes, feuille {FEUILLE_Q2} {len(q2)} lignes")
+    return pd.concat([q1, q2], ignore_index=True)
 
 
 def renommer_colonnes(df):
@@ -112,7 +137,11 @@ def standardiser_dates(df):
     parties = df["period"].str.extract(r"^(\d{4})_(\d)Q$")
     df["period_std"] = parties[0] + "Q" + parties[1]
     df["semestre"] = parties[0] + "S" + parties[1].map({"1": "1", "2": "1", "3": "2", "4": "2"})
+    # format habituel "24/Jan/2011" ; la période 2025_1Q est au format ISO "2025-02-19 00:00:00"
     df["date_releve"] = pd.to_datetime(df["date"], format="%d/%b/%Y", errors="coerce")
+    iso = df["date_releve"].isna() & df["date"].notna()
+    df.loc[iso, "date_releve"] = pd.to_datetime(df.loc[iso, "date"].str[:10],
+                                                format="%Y-%m-%d", errors="coerce")
     df["mois"] = df["date_releve"].dt.to_period("M").dt.to_timestamp()
     if df["period_std"].isna().any():
         rapport.append(f"period non reconnues : {df.loc[df['period_std'].isna(), 'period'].unique()}")
@@ -126,6 +155,10 @@ def normaliser_operateurs(df):
     cle = df["firm"].str.lower()
     reference = df.groupby(cle)["firm"].agg(lambda s: s.value_counts().idxmax())
     df["firm"] = cle.map(reference)
+    # firm_type : casse et espaces variables ("Post office" / "Post Office", "Bank/Post office")
+    cle_type = df["firm_type"].str.lower().str.replace(r"\s*/\s*", " / ", regex=True)
+    ref_type = df.groupby(cle_type)["firm_type"].agg(lambda s: s.value_counts().idxmax())
+    df["firm_type"] = cle_type.map(ref_type).str.replace(r"\s*/\s*", " / ", regex=True)
     t = df["firm_type"].str.lower().fillna("")
     df["is_bank"] = t.str.contains("bank")
     df["is_mto"] = t.str.contains("money transfer operator")
@@ -157,9 +190,12 @@ def valeur_meme_offre(df, col):
 
 
 def traiter_product(df):
-    p = df["product"]
+    """Feuille 2011-2016 : product ('Cash to account'...) ; feuille 2016-2025 : payment
+    instrument ('Bank account transfer', 'Debit card'...). Les booléens par canal et la
+    famille sont calculés sur l'une ou l'autre selon la feuille."""
+    p = df["product"].fillna(df["payment_instrument"])
     # devise de versement mélangée au produit ("USD service", "EUR service")
-    df["payout_ccy_product"] = p.str.extract(r"\b(USD|EUR|GBP|LCU)\b\s*service", expand=False)
+    df["payout_ccy_product"] = df["product"].str.extract(r"\b(USD|EUR|GBP|LCU)\b\s*service", expand=False)
     # booléens par canal (les valeurs multiples d'une cellule sont toutes captées)
     df["produit_compte"] = contient(p, "account")
     df["produit_especes"] = contient(p, "cash")
@@ -182,10 +218,12 @@ def traiter_product(df):
     famille[contient(p, "account to account")] = "Compte vers compte"
     famille[p.isna()] = pd.NA
     df["famille_produit"] = famille
-    # nulls : même offre aux autres périodes
-    df["product_impute"] = p.isna()
-    df["product"] = p.fillna(valeur_meme_offre(df, "product"))
-    autres = df.loc[df["famille_produit"] == "Autre", "product"].unique()
+    # nulls de la feuille 2011-2016 : même offre aux autres périodes
+    q1 = df["feuille"] == FEUILLE_Q1
+    manque = q1 & df["product"].isna()
+    df["product_impute"] = manque
+    df.loc[manque, "product"] = valeur_meme_offre(df, "product")[manque]
+    autres = p[df["famille_produit"] == "Autre"].unique()
     if len(autres):
         rapport.append(f"product classés 'Autre' (à vérifier) : {list(autres)[:15]}")
     return df
@@ -220,7 +258,7 @@ def traiter_speed(df):
     s = df["speed_actual"].str.lower()
     rang = pd.Series(np.nan, index=df.index)
     for motif, valeur in [(r"less than (?:one|1) hour|< ?1 ?h", 1), (r"same day", 2),
-                          (r"next day", 3), (r"^2 days", 4), (r"3.?-.?5 days", 5),
+                          (r"next day", 3), (r"^2 days", 4), (r"1.?-.?3 days", 4), (r"3.?-.?5 days", 5),
                           (r"6 days|more than", 6)]:
         rang[s.str.contains(motif, regex=True, na=False) & rang.isna()] = valeur
     df["speed_rang"] = rang
@@ -239,9 +277,12 @@ def traiter_speed(df):
 
 
 def traiter_coverage(df):
-    mode_operateur = df.groupby("firm")["coverage"].transform(
+    """coverage n'existe que dans la feuille 2011-2016 (la feuille 2016-2025 a
+    receiving_network_coverage, sur une autre échelle) : nulls comblés dans la feuille 1."""
+    q1 = df["feuille"] == FEUILLE_Q1
+    mode_operateur = df[q1].groupby("firm")["coverage"].transform(
         lambda s: s.dropna().value_counts().idxmax() if s.notna().any() else pd.NA)
-    df["coverage"] = df["coverage"].fillna(mode_operateur)
+    df.loc[q1, "coverage"] = df.loc[q1, "coverage"].fillna(mode_operateur)
     return df
 
 
@@ -298,7 +339,7 @@ def traiter_notes(df):
     df["note_promo"] = contient(n, "promotion", "special offer")
     df["note_parallele"] = contient(n, "parallel", "grey")
     df["promo_or_parallel_fx"] = df["note_promo"] | df["note_parallele"]
-    df["avertissement_transparence"] = contient(n, "not transparent")
+    df["avertissement_transparence"] = contient(n, "not transparent", "account required")
     df["fx_info_non_fiable"] = contient(n, "did not seem to be reliable",
                                         "did not seem to be comparable")
     # note2 : information du corridor -> attribut du corridor, puis colonne supprimée
@@ -535,8 +576,8 @@ def traiter_cout_total(df):
 # =============================================================================
 def supprimer_doublons_stricts(df):
     """Lignes identiques sur la clé d'offre ET sur les frais / marges / taux : vrais doublons."""
-    cols = ["period", "corridor", "firm", "product", "payout_currency", "speed_actual",
-            "sending_location", "pickup_method", "cc1_lcu_fee", "cc1_fx_margin_original",
+    cols = ["period", "corridor", "firm", "product", "payment_instrument", "payout_currency",
+            "speed_actual", "sending_location", "pickup_method", "pickup_location", "cc1_lcu_fee", "cc1_fx_margin_original",
             "cc2_lcu_fee", "cc2_fx_margin_original", "cc1_lcu_fx_rate", "inter_lcu_bank_fx_original"]
     doublons = df.astype({c: object for c in cols}).duplicated(cols)
     print(f"Doublons stricts supprimés : {doublons.sum()}")
@@ -544,8 +585,9 @@ def supprimer_doublons_stricts(df):
 
 
 def creer_cle_offre(df):
-    cols = ["period", "corridor", "firm", "product", "payout_currency", "speed_actual",
-            "sending_location", "pickup_method", "coverage", "variante", "send_currency"]
+    cols = ["period", "corridor", "firm", "product", "payment_instrument", "payout_currency",
+            "speed_actual", "sending_location", "pickup_method", "pickup_location", "coverage",
+            "receiving_network_coverage", "variante", "send_currency"]
     texte = df[cols].astype(object).fillna("").astype(str).agg("|".join, axis=1)
     cle = texte.map(lambda t: hashlib.md5(t.encode("utf-8")).hexdigest())
     # offres identiques sur tous ces attributs mais avec des frais différents :
@@ -624,7 +666,15 @@ def main():
 
     # ---------------- rapport ----------------
     print("\n===== CONTRÔLES =====")
-    print(f"Opérateurs : {df['firm_original'].nunique()} noms -> {df['firm'].nunique()}")
+    print(f"Lignes par feuille : {df['feuille'].value_counts().to_dict()}")
+    print(f"Périodes : {df['period'].min()} -> {df['period'].max()} "
+          f"({df['period'].nunique()} périodes)")
+    interne = df[df["destination_dans_perimetre"]]
+    print(f"Corridors internes au périmètre : {interne['corridor'].nunique()} "
+          f"({len(interne)} offres, dont {(interne['period'] == df['period'].max()).sum()} "
+          f"sur la dernière période)")
+    print(f"Opérateurs : {df['firm_original'].nunique()} noms -> {df['firm'].nunique()} ; "
+          f"types : {sorted(df['firm_type'].dropna().unique())}")
     print(f"payout_currency trouvée : {df['payout_currency'].notna().mean():.1%} "
           f"(par source : {df['payout_source'].value_counts(dropna=False).to_dict()})")
     print(f"Taux interbancaires remplacés par la BIS : {df['inter_fx_remplace'].sum()} | "

@@ -1,0 +1,23 @@
+destination,conformite,motifs,statut_gafi,liste_ue,echange_auto_avec_france,fsi_2026_score,taux_plus_value_pct
+Türkiye,À vérifier,liste UE des juridictions non coopératives (pending_commitments) ; opacité financière élevée (FSI 60.44),none,pending_commitments,"cbc_mcaa, crs_mcaa",60.44,0.0
+Suisse,À vérifier,opacité financière élevée (FSI 71.99),none,cooperative,"cbc_mcaa, crs_mcaa",71.99,0.0
+Bulgarie,À vérifier,liste grise GAFI,grey_list,not_evaluated,"cbc_mcaa, crs_mcaa, gir_mcaa",46.27,10.0
+Pays-Bas,Conforme,,none,not_evaluated,"carf_mcaa, cbc_mcaa, crs_mcaa, gir_mcaa",57.84,36.0
+Allemagne,Conforme,,none,not_evaluated,"carf_mcaa, cbc_mcaa, crs_mcaa, gir_mcaa",56.87,26.4
+Autriche,Conforme,,none,not_evaluated,"carf_mcaa, cbc_mcaa, crs_mcaa, gir_mcaa",55.92,27.5
+Ukraine,Conforme,,none,not_evaluated,"cbc_mcaa, crs_mcaa",55.66,19.5
+Italie,Conforme,,none,not_evaluated,"carf_mcaa, cbc_mcaa, crs_mcaa, gir_mcaa",53.37,26.0
+Norvège,Conforme,,none,cooperative,"cbc_mcaa, crs_mcaa",51.87,37.8
+Hongrie,Conforme,,none,not_evaluated,"carf_mcaa, cbc_mcaa, crs_mcaa, gir_mcaa",50.8,15.0
+Belgique,Conforme,,none,not_evaluated,"carf_mcaa, cbc_mcaa, crs_mcaa, gir_mcaa",49.63,10.0
+Roumanie,Conforme,,none,not_evaluated,"carf_mcaa, cbc_mcaa, crs_mcaa, gir_mcaa",49.63,1.0
+Espagne,Conforme,,none,not_evaluated,"carf_mcaa, cbc_mcaa, crs_mcaa, gir_mcaa",48.98,30.0
+Lituanie,Conforme,,none,not_evaluated,"carf_mcaa, cbc_mcaa, crs_mcaa",48.79,20.0
+Lettonie,Conforme,,none,not_evaluated,"carf_mcaa, cbc_mcaa, crs_mcaa",47.96,28.5
+Portugal,Conforme,,none,not_evaluated,"carf_mcaa, cbc_mcaa, crs_mcaa, gir_mcaa",46.32,19.6
+Croatie,Conforme,,none,not_evaluated,"carf_mcaa, cbc_mcaa, crs_mcaa, gir_mcaa",44.49,12.0
+Royaume-Uni,Conforme,,none,not_evaluated,"cbc_mcaa, crs_mcaa",43.82,24.0
+Pologne,Conforme,,none,not_evaluated,"carf_mcaa, cbc_mcaa, crs_mcaa, gir_mcaa",43.49,19.0
+Estonie,Conforme,,none,not_evaluated,"carf_mcaa, cbc_mcaa, crs_mcaa",41.5,22.0
+Suède,Conforme,,none,not_evaluated,"carf_mcaa, cbc_mcaa, crs_mcaa, gir_mcaa",40.39,30.0
+Tchéquie,Conforme,,none,not_evaluated,"carf_mcaa, cbc_mcaa, crs_mcaa, gir_mcaa",39.3,0.0

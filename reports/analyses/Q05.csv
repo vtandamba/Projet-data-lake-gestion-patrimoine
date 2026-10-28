@@ -1,0 +1,17 @@
+prestataire,type_prestataire,nb_offres,nb_corridors,cout_median_pct,delai_moyen_rang,pct_offres_transparentes
+TransferGo,operateur_transfert,57,2,1.13,3.0,100.0
+Paysend,operateur_transfert,40,2,1.54,1.0,100.0
+Remitly,operateur_transfert,409,11,2.0,1.3,100.0
+Wise,operateur_transfert,280,12,2.05,2.6,100.0
+MoneyGram,operateur_transfert,391,11,2.89,1.6,100.0
+Poste Italiane via Western Union,autre,13,1,3.21,1.0,100.0
+ING Bank/Postbank,banque,10,1,3.99,2.2,100.0
+La Poste via Ria,autre,10,1,4.12,1.1,100.0
+Western Union,operateur_transfert,482,11,4.12,2.1,100.0
+Ria,operateur_transfert,123,11,4.48,1.8,100.0
+Money Exchange,operateur_transfert,11,1,4.92,2.5,100.0
+Bank Austria,banque,10,1,5.36,3.9,100.0
+Postbank via Western Union,autre,30,3,5.68,3.8,100.0
+ABN AMRO Bank,banque,20,1,5.91,3.5,100.0
+Small World,operateur_transfert,208,8,7.31,1.9,100.0
+Banca Intesa SanPaolo via Western Union,autre,15,1,7.92,1.2,100.0

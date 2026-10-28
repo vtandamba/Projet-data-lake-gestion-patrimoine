@@ -1,0 +1,23 @@
+destination,devise,groupe_cout,methode_cout,fiabilite,marge_change_pct,cout_change_eur_pour_100k,montant_recu_avant_frais_eur_pour_100k
+Allemagne,EUR,A,sepa,élevée (règle SEPA),0.0,0.0,100000.0
+Autriche,EUR,A,sepa,élevée (règle SEPA),0.0,0.0,100000.0
+Belgique,EUR,A,sepa,élevée (règle SEPA),0.0,0.0,100000.0
+Bulgarie,EUR,A,sepa,élevée (règle SEPA),0.0,0.0,100000.0
+Croatie,EUR,A,sepa,élevée (règle SEPA),0.0,0.0,100000.0
+Espagne,EUR,A,sepa,élevée (règle SEPA),0.0,0.0,100000.0
+Estonie,EUR,A,sepa,élevée (règle SEPA),0.0,0.0,100000.0
+Italie,EUR,A,sepa,élevée (règle SEPA),0.0,0.0,100000.0
+Lettonie,EUR,A,sepa,élevée (règle SEPA),0.0,0.0,100000.0
+Lituanie,EUR,A,sepa,élevée (règle SEPA),0.0,0.0,100000.0
+Pays-Bas,EUR,A,sepa,élevée (règle SEPA),0.0,0.0,100000.0
+Portugal,EUR,A,sepa,élevée (règle SEPA),0.0,0.0,100000.0
+Ukraine,UAH,B,rpw_zone_euro,"bonne (observé, substitut zone euro)",1.05,1050.0,98950.0
+Roumanie,RON,B,rpw_zone_euro,"bonne (observé, substitut zone euro)",1.06,1060.0,98940.0
+Türkiye,TRY,B,rpw_zone_euro,"bonne (observé, substitut zone euro)",1.1,1100.0,98900.0
+Norvège,NOK,D,estimation,faible (estimation),1.15,1150.0,98850.0
+Royaume-Uni,GBP,D,estimation,faible (estimation),1.15,1150.0,98850.0
+Suède,SEK,D,estimation,faible (estimation),1.15,1150.0,98850.0
+Suisse,CHF,D,estimation,faible (estimation),1.15,1150.0,98850.0
+Tchéquie,CZK,D,estimation,faible (estimation),1.15,1150.0,98850.0
+Pologne,PLN,C,rpw_autre_devise,moyenne (observé depuis une autre devise),1.19,1190.0,98810.0
+Hongrie,HUF,B,rpw_zone_euro,"bonne (observé, substitut zone euro)",2.28,2280.0,97720.0

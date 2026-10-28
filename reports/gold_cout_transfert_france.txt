@@ -1,0 +1,28 @@
+RPW silver : 107900 offres, dernière période 2025_3Q
+
+Coût du change pour 100 000 € envoyés depuis la France :
+     nom_fr groupe_cout periode_reference  nb_offres  marge_change_pct  cout_change_eur_pour_100k
+  Allemagne           A              None          0              0.00                        0.0
+   Autriche           A              None          0              0.00                        0.0
+   Belgique           A              None          0              0.00                        0.0
+   Bulgarie           A              None          0              0.00                        0.0
+    Croatie           A              None          0              0.00                        0.0
+    Espagne           A              None          0              0.00                        0.0
+    Estonie           A              None          0              0.00                        0.0
+     Italie           A              None          0              0.00                        0.0
+   Lettonie           A              None          0              0.00                        0.0
+   Lituanie           A              None          0              0.00                        0.0
+   Pays-Bas           A              None          0              0.00                        0.0
+   Portugal           A              None          0              0.00                        0.0
+    Ukraine           B           2025_3Q         13              1.05                     1050.0
+   Roumanie           B           2025_3Q         63              1.06                     1060.0
+    Türkiye           B           2025_3Q         72              1.10                     1100.0
+    Norvège           D           2025_3Q        207              1.15                     1150.0
+Royaume-Uni           D           2025_3Q        207              1.15                     1150.0
+     Suisse           D           2025_3Q        207              1.15                     1150.0
+      Suède           D           2025_3Q        207              1.15                     1150.0
+   Tchéquie           D           2025_3Q        207              1.15                     1150.0
+    Pologne           C           2025_3Q         57              1.19                     1190.0
+    Hongrie           B           2025_3Q         30              2.28                     2280.0
+
+[OK] Gold enregistré : data/gold/cout_transfert_france.csv  (22 lignes, 16 colonnes)

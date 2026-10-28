@@ -1,0 +1,11 @@
+Pays du périmètre trouvés dans countries-silver : 23 / 23
+
+Zone euro : 13 pays ; UE : 18 ; SEPA : 21
+
+Destinations par groupe d'estimation du coût :
+  A (sepa, 12) : Allemagne, Autriche, Belgique, Bulgarie, Croatie, Espagne, Estonie, Italie, Lettonie, Lituanie, Pays-Bas, Portugal
+  B (rpw_zone_euro, 4) : Hongrie, Roumanie, Türkiye, Ukraine
+  C (rpw_autre_devise, 1) : Pologne
+  D (estimation, 5) : Norvège, Royaume-Uni, Suisse, Suède, Tchéquie
+
+[OK] Gold enregistré : data/gold/dim_pays.csv  (23 lignes, 17 colonnes)

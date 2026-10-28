@@ -1,0 +1,39 @@
+Destinations : 22 ; sans taux de plus-value : aucune
+
+Conformité :
+conformite
+Conforme      19
+À vérifier     3
+
+Destinations à signaler :
+  nom_fr conformite                                             motifs
+Bulgarie À vérifier                                   liste grise GAFI
+  Suisse À vérifier               opacité financière élevée (FSI 72.0)
+ Türkiye À vérifier annexe II UE, opacité financière élevée (FSI 60.4)
+
+Taux d'imposition des plus-values (%) :
+     nom_fr  taux_plus_value_pct
+   Tchéquie                  0.0
+    Türkiye                  0.0
+     Suisse                  0.0
+   Roumanie                  1.0
+   Belgique                 10.0
+   Bulgarie                 10.0
+    Croatie                 12.0
+    Hongrie                 15.0
+    Pologne                 19.0
+    Ukraine                 19.5
+   Portugal                 19.6
+   Lituanie                 20.0
+    Estonie                 22.0
+Royaume-Uni                 24.0
+     Italie                 26.0
+  Allemagne                 26.4
+   Autriche                 27.5
+   Lettonie                 28.5
+    Espagne                 30.0
+      Suède                 30.0
+   Pays-Bas                 36.0
+    Norvège                 37.8
+
+[OK] Gold enregistré : data/gold/fiscalite_conformite.csv  (22 lignes, 17 colonnes)

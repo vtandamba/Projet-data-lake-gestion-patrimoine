@@ -1,0 +1,23 @@
+rang,destination,devise,score_global,note_cout,note_risque,note_fiscalite,note_conformite,cout_change_eur_pour_100k,fiabilite_cout,score_risque,taux_plus_value_pct,conformite,motifs
+1,Belgique,EUR,92.0,100.0,95.0,74.0,100,0.0,élevée (règle SEPA),9.0,10.0,Conforme,
+2,Croatie,EUR,88.9,100.0,90.0,68.0,100,0.0,élevée (règle SEPA),14.0,12.0,Conforme,
+3,Lituanie,EUR,86.1,100.0,98.0,47.0,100,0.0,élevée (règle SEPA),7.0,20.0,Conforme,
+4,Portugal,EUR,85.3,100.0,94.0,48.0,100,0.0,élevée (règle SEPA),10.0,19.6,Conforme,
+5,Estonie,EUR,84.8,100.0,98.0,42.0,100,0.0,élevée (règle SEPA),7.0,22.0,Conforme,
+6,Allemagne,EUR,81.5,100.0,97.0,30.0,100,0.0,élevée (règle SEPA),8.0,26.4,Conforme,
+7,Autriche,EUR,81.1,100.0,98.0,27.0,100,0.0,élevée (règle SEPA),7.0,27.5,Conforme,
+8,Tchéquie,CZK,81.0,50.0,87.0,100.0,100,1150.0,faible (estimation),16.0,0.0,Conforme,
+9,Italie,EUR,80.0,100.0,91.0,31.0,100,0.0,élevée (règle SEPA),13.0,26.0,Conforme,
+10,Lettonie,EUR,79.4,100.0,94.0,25.0,100,0.0,élevée (règle SEPA),10.0,28.5,Conforme,
+11,Espagne,EUR,77.0,100.0,90.0,21.0,100,0.0,élevée (règle SEPA),14.0,30.0,Conforme,
+12,Roumanie,RON,76.7,54.0,71.0,97.0,100,1060.0,"bonne (observé, substitut zone euro)",30.0,1.0,Conforme,
+13,Pays-Bas,EUR,76.2,100.0,100.0,5.0,100,0.0,élevée (règle SEPA),5.0,36.0,Conforme,
+14,Bulgarie,EUR,73.5,100.0,84.0,74.0,0,0.0,élevée (règle SEPA),19.0,10.0,À vérifier,liste grise GAFI
+15,Suisse,CHF,67.1,50.0,91.0,100.0,0,1150.0,faible (estimation),13.0,0.0,À vérifier,opacité financière élevée (FSI 72.0)
+16,Pologne,PLN,64.8,48.0,77.0,50.0,100,1190.0,moyenne (observé depuis une autre devise),25.0,19.0,Conforme,
+17,Royaume-Uni,GBP,64.1,50.0,84.0,37.0,100,1150.0,faible (estimation),19.0,24.0,Conforme,
+18,Suède,SEK,59.8,50.0,83.0,21.0,100,1150.0,faible (estimation),20.0,30.0,Conforme,
+19,Norvège,NOK,54.3,50.0,81.0,0.0,100,1150.0,faible (estimation),21.0,37.8,Conforme,
+20,Ukraine,UAH,49.6,54.0,21.0,48.0,100,1050.0,"bonne (observé, substitut zone euro)",73.0,19.5,Conforme,
+21,Hongrie,HUF,46.1,0.0,53.0,60.0,100,2280.0,"bonne (observé, substitut zone euro)",45.0,15.0,Conforme,
+22,Türkiye,TRY,40.5,52.0,0.0,100.0,0,1100.0,"bonne (observé, substitut zone euro)",91.0,0.0,À vérifier,"annexe II UE, opacité financière élevée (FSI 60.4)"

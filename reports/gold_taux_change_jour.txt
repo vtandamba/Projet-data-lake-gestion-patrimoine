@@ -1,0 +1,16 @@
+67501 lignes, 10 devises, 1999-01-04 -> 2026-10-21
+
+Dernier taux connu par devise (du plus volatil au moins volatil) :
+devise       date  taux_pour_1_eur  volatilite_12m_pct  ecart_moyenne_12m_pct                  source
+   HUF 2026-10-21       365.000000            8.291563              -1.783686                     BCE
+   UAH 2026-09-22        51.247748            6.284846               1.380868 BIS (UAH/USD ÷ EUR/USD)
+   NOK 2026-10-21        10.512000            6.115430              -6.071612                     BCE
+   TRY 2026-10-21        55.723300            5.404763               6.032609                     BCE
+   SEK 2026-10-21        11.097500            5.282725               1.602736                     BCE
+   CHF 2026-10-21         0.925600            3.842660               0.019554                     BCE
+   PLN 2026-10-21         4.363500            3.524587               2.197351                     BCE
+   GBP 2026-10-21         0.838250            3.285446              -3.077434                     BCE
+   RON 2026-10-21         5.336500            2.664985               3.175672                     BCE
+   CZK 2026-10-21        24.262000            2.134181              -0.093174                     BCE
+
+[OK] Gold enregistré : data/gold/taux_change_jour.csv  (67501 lignes, 9 colonnes)

@@ -1,0 +1,11 @@
+devise,pays,date_dernier_taux,taux_pour_1_eur,volatilite_12m_pct,volatilite_5ans_pct
+HUF,Hongrie,2026-10-21,365.0,8.3,9.0
+UAH,Ukraine,2026-09-22,51.247747520553155,6.3,13.0
+NOK,Norvège,2026-10-21,10.512,6.1,8.4
+TRY,Türkiye,2026-10-21,55.7233,5.4,20.3
+SEK,Suède,2026-10-21,11.0975,5.3,6.3
+CHF,Suisse,2026-10-21,0.9256,3.8,5.6
+PLN,Pologne,2026-10-21,4.3635,3.5,5.6
+GBP,Royaume-Uni,2026-10-21,0.83825,3.3,5.2
+RON,Roumanie,2026-10-21,5.3365,2.7,2.1
+CZK,Tchéquie,2026-10-21,24.262,2.1,4.2

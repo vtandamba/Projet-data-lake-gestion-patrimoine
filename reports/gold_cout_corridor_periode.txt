@@ -1,0 +1,60 @@
+6593 lignes : 24 corridors x 54 trimestres x type de prestataire
+
+Dernière période (2025_3Q), tous prestataires :
+corridor devise_envoi payout_currency  nb_offres  cout_total_median_pct  marge_change_mediane_pct
+  AUTHRV          EUR             EUR         20                  1.303                     0.000
+  AUTHUN          EUR             EUR          4                  1.288                     0.000
+  AUTHUN          EUR             HUF         15                  2.647                     1.780
+  AUTTUR          EUR             EUR         11                  2.319                     0.000
+  AUTTUR          EUR             TRY         24                  2.029                     0.580
+  AUTTUR          EUR             USD          2                  2.740                     2.160
+  BELTUR          EUR             EUR          5                  3.765                     0.000
+  BELTUR          EUR             TRY         13                  2.177                     1.210
+  BELTUR          EUR             USD          3                  5.669                     4.510
+  CHEHUN          CHF             EUR          1                  1.590                     1.590
+  CHEHUN          CHF             HUF         12                  1.628                     0.630
+  CZEUKR          CZK             UAH          7                  1.819                     0.870
+  CZEUKR          CZK             USD          8                  5.614                     2.705
+  DEUBGR          EUR             BGN         16                  2.707                     1.365
+  DEUBGR          EUR             EUR          9                  1.446                     0.000
+  DEUHRV          EUR             EUR         20                  2.026                     0.000
+  DEUHUN          EUR             EUR          3                  4.203                     0.000
+  DEUHUN          EUR             HUF         15                  3.797                     2.640
+  DEUROU          EUR             EUR         28                  0.841                     0.000
+  DEUROU          EUR             RON         23                  3.061                     2.310
+  DEUTUR          EUR             EUR          9                  2.078                     0.000
+  DEUTUR          EUR             TRY         20                  1.857                     1.270
+  DEUTUR          EUR             USD          1                  3.079                     0.180
+  DEUUKR          EUR             EUR          7                  1.449                     0.000
+  DEUUKR          EUR             UAH          5                  2.842                     1.050
+  DEUUKR          EUR             USD          7                  2.596                     1.980
+  ESPBGR          EUR             BGN         13                  2.717                     1.320
+  ESPROU          EUR             RON         19                  2.300                     1.060
+  GBRBGR          GBP             BGN         19                  3.990                     2.660
+  GBRBGR          GBP             EUR          2                  9.773                     7.140
+  GBRBGR          GBP             USD          1                  5.223                     2.590
+  GBRLTU          GBP             EUR         24                  2.637                     1.850
+  GBRLTU          GBP             USD          1                  5.573                     3.910
+  GBRPOL          GBP             EUR          1                  4.443                     2.780
+  GBRPOL          GBP             PLN         28                  1.250                     0.920
+  GBRPOL          GBP             USD          1                  5.093                     3.430
+  GBRROU          GBP             EUR          6                  2.657                     1.515
+  GBRROU          GBP             RON         18                  1.505                     1.270
+  ITAROU          EUR             EUR         10                  2.159                     0.000
+  ITAROU          EUR             RON         21                  1.917                     0.760
+  ITAUKR          EUR             EUR          8                 10.435                     0.000
+  ITAUKR          EUR             UAH          8                  3.143                     1.090
+  ITAUKR          EUR             USD          9                  3.070                     2.070
+  NLDTUR          EUR             EUR          7                  3.475                     0.000
+  NLDTUR          EUR             TRY         15                  2.531                     1.080
+  NLDTUR          EUR             USD          1                  6.860                     4.860
+  NORPOL          NOK             EUR          2                  2.196                     1.390
+  NORPOL          NOK             PLN         29                  2.242                     1.560
+  POLUKR          PLN             EUR          5                  5.818                     3.560
+  POLUKR          PLN             UAH         14                  1.404                     0.840
+  POLUKR          PLN             USD          3                  2.553                     1.860
+  TURBGR          TRY             BGN          3                  9.099                     2.670
+  TURBGR          TRY             EUR          1                 34.821                     0.750
+  TURBGR          TRY             USD          7                 49.798                     2.550
+
+[OK] Gold enregistré : data/gold/cout_corridor_periode.csv  (6593 lignes, 17 colonnes)
