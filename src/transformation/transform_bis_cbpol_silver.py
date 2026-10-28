@@ -3,12 +3,12 @@ Source 4 - BIS Central bank policy rates (WS_CBPOL)
 Transformation bronze -> silver, selon le dictionnaire de données.
 
 Entrée  : data/bronze/bis_S4/Central bank policy rates.csv
-Sorties : data/silver/bis/bis_cbpol.parquet          (mensuel : 1 ligne = 1 pays x 1 mois)
-          data/silver/bis/bis_cbpol_daily.parquet    (journalier : 1 ligne = 1 pays x 1 jour)
-          data/silver/bis/dim_serie_cbpol.parquet    (1 ligne = 1 série pays x fréquence)
+Sorties : data/silver/bis/bis_cbpol.csv          (mensuel : 1 ligne = 1 pays x 1 mois)
+          data/silver/bis/bis_cbpol_daily.csv    (journalier : 1 ligne = 1 pays x 1 jour)
+          data/silver/bis/dim_serie_cbpol.csv    (1 ligne = 1 série pays x fréquence)
 
 Lancer depuis la racine du dépôt :
-    python src/transformation/silver_bis_cbpol.py
+    python src/transformation/transform_bis_cbpol_silver.py
 """
 import pandas as pd
 
@@ -120,8 +120,8 @@ def main():
 
     print()
     for nom, table in resultats.items():
-        ecrire_silver(table, f"{nom}.parquet")
-    ecrire_silver(dim, "dim_serie_cbpol.parquet")
+        ecrire_silver(table, f"{nom}.csv")
+    ecrire_silver(dim, "dim_serie_cbpol.csv")
 
     print("\nCouverture des séries mensuelles :")
     print(dim[dim["freq"] == "M"][["ref_area", "date_debut", "date_fin"]].to_string(index=False))

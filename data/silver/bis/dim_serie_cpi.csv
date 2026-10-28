@@ -1,0 +1,24 @@
+ref_area,nom_pays,unites,date_debut,date_fin,source,base_indice
+AT,Austria,"628: Index, 2010 = 100 | 771: Year-on-year changes, in per cent",1948-01-01,2026-08-01,BIS:WS_LONG_CPI(1.0) - Consumer prices,2010 = 100
+BE,Belgium,"628: Index, 2010 = 100 | 771: Year-on-year changes, in per cent",1920-01-01,2026-08-01,BIS:WS_LONG_CPI(1.0) - Consumer prices,2010 = 100
+BG,Bulgaria,"628: Index, 2010 = 100 | 771: Year-on-year changes, in per cent",1990-05-01,2026-08-01,BIS:WS_LONG_CPI(1.0) - Consumer prices,2010 = 100
+CH,Switzerland,"628: Index, 2010 = 100 | 771: Year-on-year changes, in per cent",1921-01-01,2026-08-01,BIS:WS_LONG_CPI(1.0) - Consumer prices,2010 = 100
+CZ,Czechia,"628: Index, 2010 = 100 | 771: Year-on-year changes, in per cent",1990-01-01,2026-08-01,BIS:WS_LONG_CPI(1.0) - Consumer prices,2010 = 100
+DE,Germany,"628: Index, 2010 = 100 | 771: Year-on-year changes, in per cent",1949-01-01,2026-08-01,BIS:WS_LONG_CPI(1.0) - Consumer prices,2010 = 100
+EE,Estonia,"628: Index, 2010 = 100 | 771: Year-on-year changes, in per cent",1992-07-01,2026-08-01,BIS:WS_LONG_CPI(1.0) - Consumer prices,2010 = 100
+ES,Spain,"628: Index, 2010 = 100 | 771: Year-on-year changes, in per cent",1954-03-01,2026-08-01,BIS:WS_LONG_CPI(1.0) - Consumer prices,2010 = 100
+FR,France,"628: Index, 2010 = 100 | 771: Year-on-year changes, in per cent",1951-01-01,2026-08-01,BIS:WS_LONG_CPI(1.0) - Consumer prices,2010 = 100
+GB,United Kingdom,"628: Index, 2010 = 100 | 771: Year-on-year changes, in per cent",1915-01-01,2026-08-01,BIS:WS_LONG_CPI(1.0) - Consumer prices,2010 = 100
+HR,Croatia,"628: Index, 2010 = 100 | 771: Year-on-year changes, in per cent",1992-01-01,2026-07-01,BIS:WS_LONG_CPI(1.0) - Consumer prices,2010 = 100
+HU,Hungary,"628: Index, 2010 = 100 | 771: Year-on-year changes, in per cent",1992-01-01,2026-08-01,BIS:WS_LONG_CPI(1.0) - Consumer prices,2010 = 100
+IT,Italy,"628: Index, 2010 = 100 | 771: Year-on-year changes, in per cent",1947-01-01,2026-08-01,BIS:WS_LONG_CPI(1.0) - Consumer prices,2010 = 100
+LT,Lithuania,"628: Index, 2010 = 100 | 771: Year-on-year changes, in per cent",1991-01-01,2026-08-01,BIS:WS_LONG_CPI(1.0) - Consumer prices,2010 = 100
+LV,Latvia,"628: Index, 2010 = 100 | 771: Year-on-year changes, in per cent",1991-01-01,2026-08-01,BIS:WS_LONG_CPI(1.0) - Consumer prices,2010 = 100
+NL,Netherlands,"628: Index, 2010 = 100 | 771: Year-on-year changes, in per cent",1965-01-01,2026-07-01,BIS:WS_LONG_CPI(1.0) - Consumer prices,2010 = 100
+NO,Norway,"628: Index, 2010 = 100 | 771: Year-on-year changes, in per cent",1920-03-01,2026-08-01,BIS:WS_LONG_CPI(1.0) - Consumer prices,2010 = 100
+PL,Poland,"628: Index, 2010 = 100 | 771: Year-on-year changes, in per cent",1989-01-01,2026-08-01,BIS:WS_LONG_CPI(1.0) - Consumer prices,2010 = 100
+PT,Portugal,"628: Index, 2010 = 100 | 771: Year-on-year changes, in per cent",1948-01-01,2026-08-01,BIS:WS_LONG_CPI(1.0) - Consumer prices,2010 = 100
+RO,Romania,"628: Index, 2010 = 100 | 771: Year-on-year changes, in per cent",1990-10-01,2026-08-01,BIS:WS_LONG_CPI(1.0) - Consumer prices,2010 = 100
+SE,Sweden,"628: Index, 2010 = 100 | 771: Year-on-year changes, in per cent",1918-03-01,2026-08-01,BIS:WS_LONG_CPI(1.0) - Consumer prices,2010 = 100
+TR,Türkiye,"628: Index, 2010 = 100 | 771: Year-on-year changes, in per cent",1964-01-01,2026-08-01,BIS:WS_LONG_CPI(1.0) - Consumer prices,2010 = 100
+XM,Euro area,"628: Index, 2010 = 100 | 771: Year-on-year changes, in per cent",1990-01-01,2026-08-01,BIS:WS_LONG_CPI(1.0) - Consumer prices,2010 = 100

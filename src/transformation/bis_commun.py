@@ -45,6 +45,6 @@ def separer_code_libelle(serie: pd.Series) -> tuple[pd.Series, pd.Series]:
 def ecrire_silver(df: pd.DataFrame, nom_fichier: str) -> Path:
     DOSSIER_SILVER_BIS.mkdir(parents=True, exist_ok=True)
     chemin = DOSSIER_SILVER_BIS / nom_fichier
-    df.to_parquet(chemin, index=False)
+    df.to_csv(chemin, index=False, encoding="utf-8")
     print(f"Écrit : {chemin}  ({len(df)} lignes, {df.shape[1]} colonnes)")
     return chemin

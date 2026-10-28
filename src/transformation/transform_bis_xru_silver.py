@@ -3,12 +3,12 @@ Source 4 - BIS Bilateral exchange rates (WS_XRU) : taux de change contre l'USD
 Transformation bronze -> silver, selon le dictionnaire de données.
 
 Entrée  : data/bronze/bis_S4/Bilateral exchange rates.csv
-Sorties : data/silver/bis/bis_xru.parquet          (mensuel : 1 ligne = 1 pays x 1 mois)
-          data/silver/bis/bis_xru_daily.parquet    (journalier : 1 ligne = 1 pays x 1 jour)
-          data/silver/bis/dim_serie_xru.parquet    (1 ligne = 1 pays)
+Sorties : data/silver/bis/bis_xru.csv          (mensuel : 1 ligne = 1 pays x 1 mois)
+          data/silver/bis/bis_xru_daily.csv    (journalier : 1 ligne = 1 pays x 1 jour)
+          data/silver/bis/dim_serie_xru.csv    (1 ligne = 1 pays)
 
 Lancer depuis la racine du dépôt :
-    python src/transformation/silver_bis_xru.py
+    python src/transformation/transform_bis_xru_silver.py
 """
 import pandas as pd
 
@@ -165,8 +165,8 @@ def main():
 
     print()
     for nom, table in resultats.items():
-        ecrire_silver(table, f"{nom}.parquet")
-    ecrire_silver(dim, "dim_serie_xru.parquet")
+        ecrire_silver(table, f"{nom}.csv")
+    ecrire_silver(dim, "dim_serie_xru.csv")
 
     print("\nCouverture des séries mensuelles :")
     print(dim[["ref_area", "devise", "debut_mensuel", "fin_mensuel"]].to_string(index=False))

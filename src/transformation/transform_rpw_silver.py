@@ -3,13 +3,13 @@ Source 1 (feuille 1) - Remittance Prices Worldwide (RPW)
 Transformation bronze -> silver : toutes les propositions correctives du dictionnaire.
 
 Entrées : data/bronze/rpw_f1S1/Source1_f1.csv
-          data/silver/bis/bis_xru.parquet   (taux BIS, produit par silver_bis_xru.py)
-Sorties : data/silver/rpw/rpw.parquet             (table de faits : 1 ligne = 1 offre)
-          data/silver/rpw/dim_pays_rpw.parquet    (attributs pays sortis de la table de faits)
-          data/silver/rpw/dim_operateur.parquet   (nom de référence unique par opérateur)
+          data/silver/bis/bis_xru.csv   (taux BIS, produit par transform_bis_xru_silver.py)
+Sorties : data/silver/rpw/rpw.csv             (table de faits : 1 ligne = 1 offre)
+          data/silver/rpw/dim_pays_rpw.csv    (attributs pays sortis de la table de faits)
+          data/silver/rpw/dim_operateur.csv   (nom de référence unique par opérateur)
 
-Lancer depuis la racine du dépôt (APRÈS silver_bis_xru.py) :
-    python src/transformation/silver_rpw.py
+Lancer depuis la racine du dépôt (APRÈS transform_bis_xru_silver.py) :
+    python src/transformation/transform_rpw_silver.py
 
 Ordre des traitements :
   A. structure (noms, texte, périmètre, "..", dates, opérateurs)
@@ -29,7 +29,7 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 RACINE = Path(__file__).resolve().parents[2]
 FICHIER_BRONZE = RACINE / "data" / "bronze" / "rpw_f1S1" / "Source1_f1.csv"
-FICHIER_XRU = RACINE / "data" / "silver" / "bis" / "bis_xru.parquet"
+FICHIER_XRU = RACINE / "data" / "silver" / "bis" / "bis_xru.csv"
 DOSSIER_SILVER = RACINE / "data" / "silver" / "rpw"
 
 PERIMETRE_ISO3 = {
@@ -313,10 +313,10 @@ def traiter_notes(df):
 def charger_taux_bis():
     """Table (devise, mois) -> unités de devise pour 1 USD."""
     if not FICHIER_XRU.exists():
-        rapport.append("bis_xru.parquet absent : lancer silver_bis_xru.py d'abord. "
+        rapport.append("bis_xru.csv absent : lancer transform_bis_xru_silver.py d'abord. "
                        "Contrôles BIS ignorés.")
         return None
-    xru = pd.read_parquet(FICHIER_XRU)
+    xru = pd.read_csv(FICHIER_XRU, parse_dates=["date"])
     eur = xru[xru["ref_area"] == "XM"][["date", "taux_change_lcu_usd"]].assign(currency="EUR")
     autres = (xru[(xru["currency"] != "EUR")]
               .groupby(["currency", "date"], as_index=False)["taux_change_lcu_usd"].first())
@@ -658,11 +658,11 @@ def main():
     print("\n".join(rapport) if rapport else "Aucune")
 
     DOSSIER_SILVER.mkdir(parents=True, exist_ok=True)
-    df.to_parquet(DOSSIER_SILVER / "rpw.parquet", index=False)
-    dim_pays.to_parquet(DOSSIER_SILVER / "dim_pays_rpw.parquet", index=False)
-    dim_op.to_parquet(DOSSIER_SILVER / "dim_operateur.parquet", index=False)
-    print(f"\nÉcrit : rpw.parquet ({len(df)} lignes, {df.shape[1]} colonnes), "
-          f"dim_pays_rpw.parquet ({len(dim_pays)}), dim_operateur.parquet ({len(dim_op)})")
+    df.to_csv(DOSSIER_SILVER / "rpw.csv", index=False, encoding="utf-8")
+    dim_pays.to_csv(DOSSIER_SILVER / "dim_pays_rpw.csv", index=False, encoding="utf-8")
+    dim_op.to_csv(DOSSIER_SILVER / "dim_operateur.csv", index=False, encoding="utf-8")
+    print(f"\nÉcrit : rpw.csv ({len(df)} lignes, {df.shape[1]} colonnes), "
+          f"dim_pays_rpw.csv ({len(dim_pays)}), dim_operateur.csv ({len(dim_op)})")
 
 
 if __name__ == "__main__":

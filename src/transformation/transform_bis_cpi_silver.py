@@ -3,11 +3,11 @@ Source 4 - BIS Consumer prices (WS_LONG_CPI)
 Transformation bronze -> silver, selon le dictionnaire de données.
 
 Entrée  : data/bronze/bis_S4/Consumer prices.csv
-Sorties : data/silver/bis/bis_cpi.parquet        (table de faits, 1 ligne = 1 pays x 1 mois)
-          data/silver/bis/dim_serie_cpi.parquet  (1 ligne = 1 pays)
+Sorties : data/silver/bis/bis_cpi.csv        (table de faits, 1 ligne = 1 pays x 1 mois)
+          data/silver/bis/dim_serie_cpi.csv  (1 ligne = 1 pays)
 
 Lancer depuis la racine du dépôt :
-    python src/transformation/silver_bis_cpi.py
+    python src/transformation/transform_bis_cpi_silver.py
 """
 import pandas as pd
 
@@ -111,8 +111,8 @@ def main():
     dim["source"] = "BIS:WS_LONG_CPI(1.0) - Consumer prices"
     dim["base_indice"] = "2010 = 100"
 
-    ecrire_silver(cpi, "bis_cpi.parquet")
-    ecrire_silver(dim, "dim_serie_cpi.parquet")
+    ecrire_silver(cpi, "bis_cpi.csv")
+    ecrire_silver(dim, "dim_serie_cpi.csv")
     print("\nFin de série par pays :")
     print(dim[["ref_area", "date_debut", "date_fin"]].to_string(index=False))
 
