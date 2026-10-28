@@ -1,0 +1,68 @@
+Bronze lu : data\bronze\wb_api_20261028.csv  (1794 lignes)
+Bronze lu : data\bronze\imf_debt_20261028.csv  (8098 lignes)
+
+GC.DOD.TOTL.GD.ZS écarté (couverture insuffisante) : 598 lignes, dont 467 vides
+Prévisions FMI écartées (années >= 2026) : 1314 lignes
+Années FMI avant 2000 écartées (fenêtre commune avec la Banque mondiale) : 1074 lignes
+
+Valeurs vides par indicateur (supprimées, sans imputation) :
+  FP.CPI.TOTL.ZG          0
+  NY.GDP.MKTP.KD.ZG       0
+  GGXWDG_NGDP             0
+
+Dernière année disponible (nombre d'années entre parenthèses) :
+  pays        FP.CPI.TOTL.ZG    NY.GDP.MKTP.KD.ZG          GGXWDG_NGDP
+  AUT              2025 (26)            2025 (26)            2025 (26)
+  BEL              2025 (26)            2025 (26)            2025 (26)
+  BGR              2025 (26)            2025 (26)            2025 (26)
+  CHE              2025 (26)            2025 (26)            2025 (26)
+  CZE              2025 (26)            2025 (26)            2025 (26)
+  DEU              2025 (26)            2025 (26)            2025 (26)
+  ESP              2025 (26)            2025 (26)            2025 (26)
+  EST              2025 (26)            2025 (26)            2025 (26)
+  FRA              2025 (26)            2025 (26)            2025 (26)
+  GBR              2025 (26)            2025 (26)            2025 (26)
+  HRV              2025 (26)            2025 (26)            2025 (26)
+  HUN              2025 (26)            2025 (26)            2025 (26)
+  ITA              2025 (26)            2025 (26)            2025 (26)
+  LTU              2025 (26)            2025 (26)            2025 (26)
+  LVA              2025 (26)            2025 (26)            2025 (26)
+  NLD              2025 (26)            2025 (26)            2025 (26)
+  NOR              2025 (26)            2025 (26)            2025 (26)
+  POL              2025 (26)            2025 (26)            2025 (26)
+  PRT              2025 (26)            2025 (26)            2025 (26)
+  ROU              2025 (26)            2025 (26)            2025 (26)
+  SWE              2025 (26)            2025 (26)            2025 (26)
+  TUR              2025 (26)            2025 (26)            2025 (26)
+  UKR              2025 (26)            2025 (26)            2025 (26)
+
+Valeurs extrêmes conservées : 19
+     indicator_id countryiso3code  date      value
+   FP.CPI.TOTL.ZG             ROU  2000  45.666594
+   FP.CPI.TOTL.ZG             ROU  2001  34.477012
+   FP.CPI.TOTL.ZG             TUR  2000  54.915370
+   FP.CPI.TOTL.ZG             TUR  2001  54.400201
+   FP.CPI.TOTL.ZG             TUR  2002  44.964127
+   FP.CPI.TOTL.ZG             TUR  2022  72.308830
+   FP.CPI.TOTL.ZG             TUR  2023  53.859408
+   FP.CPI.TOTL.ZG             TUR  2024  58.506449
+   FP.CPI.TOTL.ZG             TUR  2025  34.881170
+   FP.CPI.TOTL.ZG             UKR  2015  48.699865
+      GGXWDG_NGDP             ITA  2020 154.400000
+NY.GDP.MKTP.KD.ZG             ESP  2020 -10.940071
+NY.GDP.MKTP.KD.ZG             EST  2009 -14.630223
+NY.GDP.MKTP.KD.ZG             GBR  2020 -10.047897
+NY.GDP.MKTP.KD.ZG             LTU  2009 -14.838612
+NY.GDP.MKTP.KD.ZG             LVA  2009 -16.040020
+NY.GDP.MKTP.KD.ZG             UKR  2009 -15.136468
+NY.GDP.MKTP.KD.ZG             UKR  2014 -10.078895
+NY.GDP.MKTP.KD.ZG             UKR  2022 -28.758584
+
+Journal :
+  Bronze Banque mondiale                          1794
+  Bronze FMI                                      8098
+  Périmètre, 3 indicateurs, sans prévisions       1794
+  Après suppression des valeurs vides             1794
+  Silver                                          1794
+
+[OK] Silver enregistré : data\silver\wb_api.csv  (1794 lignes, 9 colonnes)

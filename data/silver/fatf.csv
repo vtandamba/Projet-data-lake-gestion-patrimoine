@@ -1,0 +1,24 @@
+iso3,iso2,country_name,fatf_status,sous_surveillance_gafi,plenary_date
+AUT,AT,Austria,none,False,2026-06-19
+BEL,BE,Belgium,none,False,2026-06-19
+BGR,BG,Bulgaria,grey_list,True,2026-06-19
+HRV,HR,Croatia,none,False,2026-06-19
+CZE,CZ,Czechia,none,False,2026-06-19
+EST,EE,Estonia,none,False,2026-06-19
+FRA,FR,France,none,False,2026-06-19
+DEU,DE,Germany,none,False,2026-06-19
+HUN,HU,Hungary,none,False,2026-06-19
+ITA,IT,Italy,none,False,2026-06-19
+LVA,LV,Latvia,none,False,2026-06-19
+LTU,LT,Lithuania,none,False,2026-06-19
+NLD,NL,Netherlands,none,False,2026-06-19
+NOR,NO,Norway,none,False,2026-06-19
+POL,PL,Poland,none,False,2026-06-19
+PRT,PT,Portugal,none,False,2026-06-19
+ROU,RO,Romania,none,False,2026-06-19
+ESP,ES,Spain,none,False,2026-06-19
+SWE,SE,Sweden,none,False,2026-06-19
+CHE,CH,Switzerland,none,False,2026-06-19
+TUR,TR,Türkiye,none,False,2026-06-19
+UKR,UA,Ukraine,none,False,2026-06-19
+GBR,GB,United Kingdom,none,False,2026-06-19

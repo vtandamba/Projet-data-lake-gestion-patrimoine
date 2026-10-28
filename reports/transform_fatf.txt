@@ -1,0 +1,14 @@
+Bronze lu : data\bronze\fatf_lists_20261028.csv  (25 lignes, plénière du 2026-06-19)
+
+Pays listés par le GAFI : 25 (dont 1 dans le périmètre)
+
+Statut des 23 pays du périmètre :
+fatf_status
+none         22
+grey_list     1
+
+Pays du périmètre sous surveillance :
+iso3 country_name fatf_status
+ BGR     Bulgaria   grey_list
+
+[OK] Silver enregistré : data\silver\fatf.csv  (23 lignes, 6 colonnes)

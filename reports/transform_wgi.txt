@@ -1,0 +1,41 @@
+Bronze lu : data\bronze\wgi_20261028.csv  (4140 lignes)
+
+Scores vides supprimés (sans imputation) : 414 - années : [1997, 1999, 2001]
+Scores au-delà de ±2.5 (conservés) : 0
+
+Années : 1996 -> 2025
+
+Scores 2025 par pays (du plus stable politiquement au moins stable) :
+governance_dimension    va    pv    ge    rq    rl    cc
+economy_code                                            
+CHE                   1.54  1.12  1.97  1.68  1.74  1.98
+NOR                   1.82  1.08  1.84  1.59  1.94  1.93
+CZE                   1.18  1.02  1.24  1.07  1.17  0.78
+LTU                   1.18  0.93  1.24  1.27  1.37  1.02
+EST                   1.34  0.89  1.50  1.37  1.43  1.64
+SWE                   1.63  0.85  1.82  1.57  1.74  1.96
+LVA                   1.12  0.81  0.83  1.02  1.07  0.77
+PRT                   1.27  0.70  1.02  0.56  1.05  0.77
+POL                   0.82  0.69  0.80  0.79  0.57  0.85
+HRV                   0.74  0.68  0.77  0.44  0.42  0.13
+NLD                   1.59  0.53  1.74  1.44  1.67  1.87
+AUT                   1.42  0.53  1.54  1.07  1.65  1.30
+HUN                  -0.04  0.51  0.47  0.26  0.22  0.00
+ITA                   1.08  0.46  0.92  0.60  0.59  0.58
+GBR                   1.28  0.29  1.23  1.46  1.27  1.53
+BGR                   0.27  0.25  0.13  0.34 -0.05 -0.29
+DEU                   1.54  0.21  1.49  1.22  1.60  1.68
+ROU                   0.44  0.21  0.37  0.27  0.30 -0.00
+ESP                   1.12  0.18  1.13  0.42  0.87  0.65
+BEL                   1.43  0.17  1.32  1.21  1.27  1.36
+FRA                   1.16 -0.09  1.21  0.99  0.97  1.24
+UKR                  -0.08 -0.33 -0.60 -0.28 -0.79 -0.69
+TUR                  -1.11 -0.88  0.03 -0.17 -0.81 -0.53
+
+Journal :
+  Bronze                                          4140
+  Périmètre (23 pays, 6 dimensions)               4140
+  Après suppression des années non publiées       3726
+  Silver                                          3726
+
+[OK] Silver enregistré : data\silver\wgi.csv  (3726 lignes, 7 colonnes)
