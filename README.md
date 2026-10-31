@@ -14,28 +14,32 @@ Projet M2 DS4SC (Université de Tours, Blois) - module Data Lake & ingénierie d
 
 ## Démarrage rapide (Docker)
 
-Prérequis : Docker Desktop. La zone `data/silver` est versionnée dans le dépôt ; `data/gold` n'a pas besoin d'être remplie au préalable.
-
-Depuis un clone, deux commandes suffisent :
+Prérequis : Docker Desktop, et les dossiers `data/silver` et `data/gold` remplis (voir [Pipeline](#pipeline-de-données)) — ou [construire `data/gold` automatiquement](#construire-le-gold-automatiquement-raccourci).
 
 ```bash
-docker compose up -d --build postgres application   # base PostgreSQL + application conseiller
-docker compose run --rm gold                         # construit data/gold depuis data/silver, puis charge silver + gold dans la base
+docker compose up -d --build            # base PostgreSQL + application conseiller
+docker compose run --rm chargement      # charge data/silver et data/gold dans la base (première fois)
 ```
-
-Le service `gold` exécute `src/gold/construire_gold.py` (les 9 tables gold, rapports dans `reports/gold_*.txt`), puis `src/gold/charger_postgres.py`. Si la construction échoue, le chargement n'est pas lancé. Une fois `data/gold` rempli, `docker compose run --rm chargement` suffit pour recharger la base sans reconstruire gold.
-
-> **Périmètre reproductible.** Docker couvre le chemin **silver → gold → PostgreSQL**. La phase **bronze → silver** reste une étape de préparation locale (voir [Pipeline](#pipeline-de-données)) : certaines sources bronze sont déposées à la main (fichiers téléchargés manuellement), donc elle n'est pas conteneurisée. Son résultat, `data/silver/`, est versionné pour que le reste du pipeline soit rejouable tel quel.
 
 | Service | Adresse | Rôle |
 |---|---|---|
 | `application` | http://localhost:8501 | application conseiller « Passerelle » (Streamlit) |
 | `postgres` | `localhost:5434`, base / utilisateur / mot de passe `data_lake` | schémas `silver` et `gold` |
-| `gold` | lancé à la demande | construit `data/gold` depuis `data/silver`, puis charge silver et gold dans la base |
-| `chargement` | lancé à la demande | recharge silver et gold dans la base (sans reconstruire gold) |
+| `chargement` | lancé à la demande | recharge silver et gold dans la base |
 
 Arrêter : `docker compose down` (les données restent dans le volume) · tout effacer : `docker compose down -v`.
 Identifiants de développement **local** uniquement : la base n'est pas exposée sur Internet.
+
+### Construire le gold automatiquement (raccourci)
+
+*(Ajout — branche `develop`.)* Si `data/gold` n'est pas encore rempli, le service `gold` le construit à partir de `data/silver` (versionné), puis charge la base — sans étape locale préalable :
+
+```bash
+docker compose up -d --build postgres application
+docker compose run --rm gold
+```
+
+Il enchaîne `src/gold/construire_gold.py` puis `src/gold/charger_postgres.py`. Couvre le chemin **silver → gold → PostgreSQL** ; la phase **bronze → silver** reste locale (voir [Pipeline](#pipeline-de-données)).
 
 ---
 
@@ -93,8 +97,7 @@ src/ingestion/          collecte vers bronze (ingest_*_bronze.py) et profilage
 src/transformation/     nettoyage vers silver (transform_*_silver.py)
 src/gold/               construction des tables gold et chargement PostgreSQL
 src/analyse/            exécution des requêtes et profilage
-docker-compose.yml      base PostgreSQL, application, chargement, gold
-docker/                 gold.Dockerfile (pipeline silver → gold → PostgreSQL)
+docker-compose.yml      base PostgreSQL, application, chargement
 ```
 
 ---
@@ -117,7 +120,7 @@ Toutes les commandes se lancent depuis la racine du dépôt. Chaque script décr
 
 1. **Bronze** : `python src/ingestion/ingest_<source>_bronze.py` pour les sources téléchargeables (Banque mondiale, FMI, WGI, GAFI, OCDE, liste UE, FSI) ; les fichiers RPW (Excel) et BIS (CSV SDMX) sont déposés dans `data/bronze/` puis extraits.
 2. **Silver** : `python src/transformation/transform_<source>_silver.py` (un script par source).
-3. **Gold** : `python src/gold/construire_gold.py` (ou, avec le chargement enchaîné, `docker compose run --rm gold`) construit les 9 tables dans l'ordre des dépendances (environ 40 s) ; un rapport par table est écrit dans `reports/gold_*.txt`.
+3. **Gold** : `python src/gold/construire_gold.py` construit les 9 tables dans l'ordre des dépendances (environ 40 s) ; un rapport par table est écrit dans `reports/gold_*.txt`.
 4. **PostgreSQL** : `python src/gold/charger_postgres.py` (ou `docker compose run --rm chargement`) charge silver et gold par `COPY` et vérifie le nombre de lignes de chaque table.
 
 ---
