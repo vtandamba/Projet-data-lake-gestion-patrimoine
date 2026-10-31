@@ -2,6 +2,8 @@
 #
 # Démarrer la base et l'application :   docker compose up -d --build
 #   -> application : http://localhost:8501      base : localhost:5434 (data_lake / data_lake)
+# Construire gold depuis silver PUIS charger silver et gold (depuis un clone) :
+#                                       docker compose run --rm gold
 # Charger (ou recharger) silver et gold dans la base :
 #                                       docker compose run --rm chargement
 # Arrêter :                             docker compose down       (les données restent dans le volume)
@@ -54,6 +56,26 @@ services:
       - ./data/silver:/projet/data/silver:ro
       - ./data/gold:/projet/data/gold:ro
     command: ["python", "src/gold/charger_postgres.py"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  # Service ponctuel (non lancé par « up ») : construit data/gold depuis data/silver,
+  # puis charge silver et gold dans la base. S'arrête si la construction gold échoue.
+  gold:
+    build:
+      context: .
+      dockerfile: docker/gold.Dockerfile
+    image: passerelle-gold
+    profiles: ["gold"]
+    working_dir: /app
+    environment:
+      DATABASE_URL: postgresql+psycopg2://data_lake:data_lake@postgres:5432/data_lake
+    volumes:
+      - ./data/silver:/app/data/silver:ro
+      - ./data/gold:/app/data/gold
+      - ./reports:/app/reports
+    command: ["sh", "-c", "python src/gold/construire_gold.py && python src/gold/charger_postgres.py"]
     depends_on:
       postgres:
         condition: service_healthy
