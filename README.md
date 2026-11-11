@@ -14,13 +14,18 @@ Projet M2 DS4SC (Université de Tours, Blois) - module Data Lake & ingénierie d
 
 ## Démarrage rapide (Docker)
 
-Prérequis : Docker Desktop. `data/silver` est versionné dans le dépôt ; `data/gold` est construit automatiquement, rien à préparer avant.
+Prérequis : 
+  - Docker Desktop 
+  - le dossier `data/silver` déjà versionné dans le dépôt  
+  - le dossier `data/gold` (construit automatiquement, rien à préparer avant).
 
-Depuis un clone, deux commandes suffisent :
+Depuis un clone du projet, lancer ces deux commandes docker :
 
 ```bash
-docker compose up -d --build postgres application   # base PostgreSQL + application conseiller
-docker compose run --rm gold                         # construit data/gold depuis data/silver, puis charge silver + gold dans la base
+docker compose up -d --build postgres application   
+# base PostgreSQL + application conseiller
+docker compose run --rm gold                        
+# construit data/gold depuis data/silver, puis charge silver + gold dans la base
 ```
 
 Une fois terminé, l'application est disponible sur http://localhost:8501.
