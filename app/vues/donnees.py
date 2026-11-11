@@ -21,7 +21,7 @@ SOURCES = {
     "Banque mondiale + FMI (API)": ("API JSON", "wb_api_*.csv, imf_debt_*.csv"),
     "Banque mondiale - WGI": ("API JSON", "wgi_*.csv"),
     "GAFI": ("page web", "fatf_lists_*.csv"),
-    "Tax Justice Network": ("CSV", "fsi_2026_raw.csv"),
+    "Tax Justice Network": ("API JSON", "fsi_2026_raw.csv"),
     "Union européenne": ("fourni par l'équipe", None),
     "OCDE": ("fourni par l'équipe", None),
     "Tax Foundation": ("fourni par l'équipe", None),

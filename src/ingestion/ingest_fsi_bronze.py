@@ -1,7 +1,7 @@
 """
 Ingestion BRONZE — Financial Secrecy Index (FSI 2026)
 Source : Tax Justice Network — https://fsi.taxjustice.net/full-list/
-Licence : CC BY-NC-SA 4.0 (usage académique). >>> Citer le Tax Justice Network dans le rapport. <<<
+Licence : CC BY-NC-SA 4.0 (usage académique). 
 
 POURQUOI CE SCRIPT :
 Le classement FSI n'est pas un simple tableau HTML : la page est construite en
