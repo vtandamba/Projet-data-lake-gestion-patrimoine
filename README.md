@@ -176,7 +176,7 @@ Le démarrage rapide (en haut) conteneurise les étapes 3 et 4 : depuis un clone
 | Union européenne | liste des juridictions non coopératives | fichier de l'équipe |
 | OCDE | accords d'échange automatique d'informations | fichier de l'équipe |
 | Tax Foundation | imposition des plus-values en Europe | fichier de l'équipe |
-| Tax Justice Network - Financial Secrecy Index 2026 | opacité financière | CSV |
+| Tax Justice Network - Financial Secrecy Index 2026 | opacité financière | page web |
 
 - **Financial Secrecy Index (FSI)** — Tax Justice Network, licence [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). À citer dans tous les usages et publications dérivées.
 - Contours des pays de la carte : `app/assets/europe.geo.json`, d'après Natural Earth (domaine public) via le dépôt johan/world.geo.json.
